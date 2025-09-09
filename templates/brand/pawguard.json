@@ -1,0 +1,6 @@
+{
+  "brand": {"name": "PawGuard", "primary": "#6EE7B7", "secondary": "#0EA5E9", "bg": "#0B1220"},
+  "layout": {"frame": "rounded-xl", "logo": "https://example.com/logo.png", "shadow": "soft"},
+  "fx": {"glass": true, "grain": 0.06, "glow": 0.2},
+  "copy": {"title": "Reunite Faster", "cta": "Scan to Share"}
+}

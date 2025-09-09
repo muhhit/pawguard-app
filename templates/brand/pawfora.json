@@ -1,0 +1,22 @@
+{
+  "brand": {
+    "name": "PawFora",
+    "primary": "#00A7A7",
+    "dark": "#1E1E1E",
+    "bg": "#0E131A"
+  },
+  "layout": {
+    "frame": "rounded-xl",
+    "logo": "assets/brand/pawfora/logo.svg",
+    "shadow": "soft"
+  },
+  "fx": {
+    "glass": true,
+    "grain": 0.04,
+    "glow": 0.18
+  },
+  "copy": {
+    "title": "Help Pets Get Home",
+    "cta": "Share & Scan"
+  }
+}
