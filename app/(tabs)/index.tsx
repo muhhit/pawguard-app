@@ -13,7 +13,7 @@ import {
   Dimensions,
   useWindowDimensions,
 } from "react-native";
-import OptimizedImage from "@/components/OptimizedImage";
+import { Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { BlurView } from "expo-blur";
 import { 
