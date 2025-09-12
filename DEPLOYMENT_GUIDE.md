@@ -1,9 +1,9 @@
-# 🚀 PawGuard Deployment Guide - GitHub to Rork Integration
+# 🚀 PawGuard Deployment Guide - GitHub to Modern Cloud Integration
 
 ## Current Status
 ✅ Git repository initialized with 137 files  
 ✅ All security components implemented  
-✅ Remote configured: `https://github.com/muhhit/rork-pawguard.git`  
+✅ Remote configured: `https://github.com/muhhit/pawguard-app.git`  
 ⚠️ **NEXT STEP**: Push to GitHub (authentication required)
 
 ## 📋 Quick Deployment Steps
@@ -24,37 +24,38 @@ Run `sql/schema.sql` in Supabase SQL to create tables/functions. Add RLS.
 
 2. **Push with Token**:
    ```bash
-   cd /Users/macbook/Downloads/rork-pawguard-security/rork-pawguard-main
-   git push https://[USERNAME]:[TOKEN]@github.com/muhhit/rork-pawguard.git main
+   cd /Users/macbook/Desktop/pawguard-mvp
+   git push https://[USERNAME]:[TOKEN]@github.com/muhhit/pawguard-app.git main
    ```
 
 ### Option 2: Manual Upload (Alternative)
 
 1. **Use the ZIP file**: `pawguard-security-complete.zip`
 2. **GitHub Web Upload**:
-   - Go to: https://github.com/muhhit/rork-pawguard
+   - Go to: https://github.com/muhhit/pawguard-app
    - Drag and drop the ZIP contents
    - Commit with message: "Add PawGuard security system with trust verification"
 
-## 🔧 Rork Platform Integration
+## 🔧 Modern Platform Integration
 
-Once on GitHub, connect to Rork:
+Once on GitHub, connect to your preferred platform:
 
-1. **Rork Dashboard**: Connect GitHub repository
-2. **Environment Variables**: Configure from `.env.example`
-3. **Build Settings**: 
+1. **Vercel/Netlify**: Connect GitHub repository for web deployment
+2. **EAS Build**: For native mobile builds
+3. **Environment Variables**: Configure from `.env.example`
+4. **Build Settings**: 
    - Framework: React Native (Expo)
    - Node version: 18+
    - Build command: `expo build`
 
-4. **Env Variables**: Add `EXPO_PUBLIC_*` values from `.env` to Rork build settings.
+5. **Env Variables**: Add `EXPO_PUBLIC_*` values from `.env` to platform build settings.
 
 ### Optional: Payments Backend (Local/Cloud)
 
 1. `cd assets/pawguard-mvp/server && npm i`
 2. Env: `PORT, SUPABASE_URL, SUPABASE_SERVICE_ROLE, STRIPE_SECRET_KEY (ops.)`
 3. `npm run dev` → API base: `http://localhost:4000`
-4. Mobil `.env`: `EXPO_PUBLIC_API_BASE_URL=http://<LAN-IP>:4000`
+4. Mobile `.env`: `EXPO_PUBLIC_API_BASE_URL=http://<LAN-IP>:4000`
 
 ### Optional: Brandify AI (Gemini)
 
@@ -66,7 +67,7 @@ GOOGLE_GENAI_API_KEY=your_google_ai_studio_key
 
 The Brandify endpoint `/render/brandify` will use Gemini 2.5 Flash Image to produce brand-ready images when this key is set. Otherwise it will return mock outputs safely.
 
-### Required Environment Variables for Rork:
+### Required Environment Variables for Production:
 ```bash
 EXPO_PUBLIC_SUPABASE_URL=your_supabase_project_url
 EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
@@ -155,4 +156,4 @@ CREATE TABLE feeding_records (
 
 ---
 
-**🎉 Ready for Rork deployment!** The security system will protect both pets and users while providing a gamified experience for community animal care.
+**🎉 Ready for modern cloud deployment!** The security system will protect both pets and users while providing a gamified experience for community animal care.

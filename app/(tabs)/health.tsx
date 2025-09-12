@@ -244,13 +244,18 @@ export default function HealthScreen() {
     try {
       setIsLoadingGuidance(true);
       
-      const response = await fetch('https://toolkit.rork.com/text/llm/', {
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.EXPO_PUBLIC_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
+          model: 'gpt-4o-mini',
           messages: [{
+            role: 'system',
+            content: 'You are a veterinary assistant providing educational information only. Always recommend consulting a real veterinarian for proper diagnosis.'
+          }, {
             role: 'user',
             content: `CRITICAL SAFETY RULES:
 1. Never provide specific medical diagnoses
@@ -261,7 +266,9 @@ export default function HealthScreen() {
 Pet symptoms: ${symptoms}
 
 Provide helpful guidance while emphasizing the need for professional veterinary care. End with: "This is for educational purposes only. Consult a veterinarian for proper diagnosis."`
-          }]
+          }],
+          max_tokens: 500,
+          temperature: 0.3
         })
       });
 
@@ -270,7 +277,7 @@ Provide helpful guidance while emphasizing the need for professional veterinary 
       }
 
       const data = await response.json();
-      const guidance = data.completion;
+      const guidance = data.choices[0].message.content;
       
       // Extract urgency level from response
       const urgencyMatch = guidance.match(/\[(EMERGENCY|URGENT|ROUTINE|INFORMATION)\]/);

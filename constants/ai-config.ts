@@ -1,18 +1,19 @@
-// AI Service Configuration (env-driven)
+// AI Service Configuration (modern)
 export const AI_CONFIG = {
-  // Primary LLM endpoint (Rork toolkit)
-  RORK_API_URL: 'https://toolkit.rork.com/text/llm/',
-
-  // OpenAI fallback (key via env)
+  // OpenAI API (primary)
   OPENAI_API_KEY: process.env.EXPO_PUBLIC_OPENAI_API_KEY,
   OPENAI_API_URL: 'https://api.openai.com/v1/chat/completions',
 
-  // Mapbox API Key (env)
-  MAPBOX_API_KEY: process.env.EXPO_PUBLIC_MAPBOX_TOKEN,
+  // Claude API (Anthropic)
+  CLAUDE_API_KEY: process.env.EXPO_PUBLIC_CLAUDE_API_KEY,
+  CLAUDE_API_URL: 'https://api.anthropic.com/v1/messages',
+
+  // Google Maps API Key
+  GOOGLE_MAPS_API_KEY: process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY,
 };
 
 // AI Service Types
-export type AIService = 'rork' | 'openai';
+export type AIService = 'openai' | 'claude';
 
 export interface AIMessage {
   role: 'system' | 'user' | 'assistant';

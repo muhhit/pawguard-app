@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.rork.pawguard-6h4aear",
+      "bundleIdentifier": "com.pawguard.app",
       "infoPlist": {
         "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
         "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access your camera",
@@ -34,7 +34,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "app.rork.pawguard-6h4aear",
+      "package": "com.pawguard.app",
       "permissions": [
         "CAMERA",
         "READ_EXTERNAL_STORAGE",
@@ -58,7 +58,7 @@
       [
         "expo-router",
         {
-          "origin": "https://rork.com/"
+          "origin": "https://pawguard.com/"
         }
       ],
       [

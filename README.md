@@ -1,31 +1,48 @@
-# PawGuard MVP (Expo/React Native)
+# PawGuard MVP
 
-Hızlı başlangıç ve dağıtım için hazırlanmış PawGuard MVP kod tabanı. Rork ile bağlanmaya ve Supabase/ödemeler ile canlıya çıkmaya hazırdır.
+AI-powered lost pet recovery platform connecting pet owners, community helpers, and emergency responders across Turkey and the UK.
 
-## Hızlı Başlangıç
+## Quick Start
 
-1) `.env.example` dosyasını `.env` olarak kopyalayın ve değerleri doldurun (EAS/Rork için EXPO_PUBLIC_*).
-
-2) Supabase projenizde `sql/schema.sql` içeriğini çalıştırın (PostGIS etkin, fonksiyonlar + indexler dahil). RLS politikalarını ekleyin.
-
-3) Geliştirme:
-
-```
-bun install
-bunx expo start
+1) Setup environment:
+```bash
+npm install
+npm start
 ```
 
-4) Rork entegrasyonu: Depolama/env ayarlarını Rork paneline ekleyin. Build sonrası `.env` içeriğini EXPO_PUBLIC_* olarak tanımlayın.
+2) Configure Supabase (PostGIS enabled with functions + indexes)
 
-## Öne Çıkanlar
+3) Development:
+```bash
+npx expo start
+```
 
-- Harita + kümelenme + gizlilik katmanı (privacy-level)
-- Kayıp ilan akışı, ödül talep yaşam döngüsü
-- Iyzico/Stripe için backend entegrasyon hazneleri (client hazır, server gerektiği gibi)
-- Push kayıtları (Expo token → Supabase)
-- Güven/Doğrulama UI'ları ve şema
+## Core Features
 
-## Notlar
+- **Amber Alert System**: 5-15km emergency broadcast for lost pets
+- **Health Hub**: Digital vaccination tracking and AI health scanning
+- **Trust Graph**: Community verification and fraud prevention
+- **Modern UI/UX**: Glass morphism design with intuitive navigation
 
-- Üretime çıkmadan önce tüm API anahtarlarını `.env` üzerinden yönetin; repoda saklamayın.
-- `docs/BACKEND_INTEGRATION.md` ödeme ve bildirim uçlarını özetler.
+## Technical Stack
+
+- **Frontend**: React Native + Expo SDK 52
+- **State**: Zustand + React Query  
+- **Database**: Supabase (PostgreSQL + PostGIS)
+- **Backend**: Node.js + Express + TypeScript
+- **AI**: OpenAI Vision API, multi-agent development
+
+## Project Status
+
+**Ready for 4-Agent Development Team:**
+- Spec Kit: Feature planning and architecture
+- Claude: Core implementation  
+- ChatGPT: Integrations and testing
+- Gemini: UI/UX and design
+
+## Goals
+
+- 100K+ active users in year 1
+- £1M ARR trajectory by month 14
+- 1000+ pets reunited in year 1
+- <30 minute Amber Alert response time

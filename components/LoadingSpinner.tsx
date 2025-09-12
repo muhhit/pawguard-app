@@ -101,7 +101,7 @@ export default function LoadingSpinner({
     <Animated.View style={[styles.brandedContainer, { opacity: fadeAnim }]}>
       <Animated.View style={[styles.logoContainer, { transform: [{ scale: pulseAnim }] }]}>
         <Image
-          source={{ uri: 'https://r2-pub.rork.com/generated-images/938b20d3-63e4-4941-bed8-5484c2a8dc43.png' }}
+          source={{ uri: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=100&h=100&fit=crop&crop=center&auto=format&q=80' }}
           style={styles.logo}
           resizeMode="contain"
         />

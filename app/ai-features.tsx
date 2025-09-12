@@ -83,7 +83,7 @@ export default function AIFeaturesScreen() {
 
       <View style={styles.apiInfo}>
         <Text style={styles.apiInfoTitle}>🤖 AI Services Available:</Text>
-        <Text style={styles.apiInfoText}>• Rork Toolkit API (Primary)</Text>
+        <Text style={styles.apiInfoText}>• OpenAI API (Primary)</Text>
         <Text style={styles.apiInfoText}>• OpenAI GPT-4o-mini (Fallback)</Text>
         <Text style={styles.apiInfoText}>• Automatic failover for reliability</Text>
       </View>
