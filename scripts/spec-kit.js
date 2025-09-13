@@ -54,7 +54,8 @@ function main() {
     process.exit(0);
   }
 
-  const wanted = task || Object.keys(cfg.tasks || {})[0];
+  // Default to Claude (anthropic) task ordering in spec.config.json
+  const wanted = task || Object.keys(cfg.tasks || {})[0] || 'mobile:claude';
   const tdef = tasks.find((t) => t.title.toLowerCase().includes((wanted || "").split(":").pop().replace(/^[^a-z0-9]+/i, "").toLowerCase()));
   const selection = cfg.tasks[wanted] || { provider };
   const prov = selection.provider || provider || "openai";
@@ -93,4 +94,3 @@ function main() {
 }
 
 main();
-
