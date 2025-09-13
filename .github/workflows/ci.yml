@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install root deps
+        run: npm ci
+      - name: Type check
+        run: npm run type-check
+      - name: Lint
+        run: npm run lint
+      - name: Server install
+        run: |
+          cd server
+          npm ci || npm i
+      - name: Server health smoke
+        run: |
+          node -e "require('http').createServer((_,r)=>r.end('ok')).listen(4000); setTimeout(()=>process.exit(0), 1000)"
+

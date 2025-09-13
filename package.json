@@ -15,6 +15,9 @@
     "server": "cd server && npm run dev",
     "dev": "concurrently \"npm run start\" \"npm run server\"",
     "spec": "node scripts/spec-kit.js",
+    "spec:gemini": "node scripts/spec-kit.js -p google -t mobile:gemini",
+    "spec:claude": "node scripts/spec-kit.js -p anthropic -t mobile:claude",
+    "spec:openai": "node scripts/spec-kit.js -p openai -t mobile:openai",
     "spec:generate": "node scripts/spec-generate.js",
     "spec:analyze": "node scripts/spec-analyze.js"
   },
@@ -81,7 +84,8 @@
     "@types/react": "~19.0.10",
     "eslint": "^9.31.0",
     "eslint-config-expo": "^9.2.0",
-    "typescript": "~5.8.3"
+    "typescript": "~5.8.3",
+    "concurrently": "^8.2.2"
   },
   "keywords": ["react-native", "expo", "pets", "lost-found"],
   "author": "PawGuard Team",

@@ -1,0 +1,6 @@
+[submodule "vendor/ai-prompts"]
+	path = vendor/ai-prompts
+	url = https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
+[submodule "vendor/mcp-servers"]
+	path = vendor/mcp-servers
+	url = https://github.com/modelcontextprotocol/servers
