@@ -56,7 +56,12 @@ function main() {
 
   // Default to Claude (anthropic) task ordering in spec.config.json
   const wanted = task || Object.keys(cfg.tasks || {})[0] || 'mobile:claude';
-  const tdef = tasks.find((t) => t.title.toLowerCase().includes((wanted || "").split(":").pop().replace(/^[^a-z0-9]+/i, "").toLowerCase()));
+  const needle = (wanted || "").split(":").pop().replace(/^[^a-z0-9]+/i, "").toLowerCase();
+  let tdef = tasks.find((t) => t.title.toLowerCase().includes(needle));
+  // Fallback: if no matching task title (e.g. 'claude|openai|gemini'), pick the first SPEC task (typically T0)
+  if (!tdef) {
+    tdef = tasks[0];
+  }
   const selection = cfg.tasks[wanted] || { provider };
   const prov = selection.provider || provider || "openai";
   const model = selection.model || process.env.SPEC_MODEL || "gpt-4o";
