@@ -24,6 +24,8 @@ git commit -m "chore: bootstrap agents + spec kit" || true
 git push -u origin main
 
 echo "[gh-bootstrap] Creating Codespace..."
-gh codespace create -r "${GITHUB_USER}/${REPO_NAME}" -b main --display-name PawGuard --machine standardLinux || true
+# Prefer larger machine when available; fallback gracefully.
+if ! gh codespace create -R "${GITHUB_USER}/${REPO_NAME}" -b main --display-name PawGuard --machine standardLinux32gb; then
+  gh codespace create -R "${GITHUB_USER}/${REPO_NAME}" -b main --display-name PawGuard --machine basicLinux32gb || true
+fi
 echo "Done. Open Codespaces from gh or GitHub UI."
-
