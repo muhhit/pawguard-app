@@ -15,7 +15,7 @@ This repo is wired for a hands-off flow: a Mac local agent handles OS tasks and 
 1. Use `scripts/gh-bootstrap.sh` to push the repo and create a Codespace.
 2. Open Codespaces. Devcontainer installs extensions and inits submodules.
 3. Set Secrets: `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `GOOGLE_API_KEY`.
-4. Run `npm run spec:gemini|claude|openai` to select a provider and task.
+4. Default provider is Anthropic Claude (Sonnet). Run `npm run spec:claude` (or `:openai`, `:gemini`).
 5. In the IDE, run Cline or Continue and feed SPEC.md task to apply diffs.
 
 ## Recommended Repos
@@ -53,4 +53,3 @@ Then set model names accordingly (e.g., `gpt-4o`, `claude-3-5-sonnet`, `gemini-1
 ## Spec Tasks (short)
 
 - T1 Iyzico integration; T2 Notifications dispatch; T3 RLS; T4 DevEx.
-
