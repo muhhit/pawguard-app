@@ -108,7 +108,8 @@ function main() {
 
   const picked = pickConfigTask(cfg, task);
   let selection = picked ? picked.def : {};
-  let taskId = picked ? picked.id : (specTasks[0] ? specTasks[0].title : "unknown");
+  // If user provided an explicit task id/needle that isn't in config, honor it as SPEC needle
+  let taskId = picked ? picked.id : (task || (specTasks[0] ? specTasks[0].title : "unknown"));
 
   const needle = String(taskId).split(":").pop().toLowerCase();
   const specMatch = specTasks.find((t) => t.title.toLowerCase().includes(needle)) || specTasks[0];
