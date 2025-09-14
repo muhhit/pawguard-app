@@ -19,7 +19,9 @@
     "spec:claude": "node scripts/spec-kit.js -p anthropic -t mobile:claude",
     "spec:openai": "node scripts/spec-kit.js -p openai -t mobile:openai",
     "spec:generate": "node scripts/spec-generate.js",
-    "spec:analyze": "node scripts/spec-analyze.js"
+    "spec:analyze": "node scripts/spec-analyze.js",
+    "spec:auto": "node scripts/spec-orchestrator.js --start T0",
+    "spec:next": "node scripts/spec-orchestrator.js --start T0 --no-watch -n 1"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

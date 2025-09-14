@@ -83,7 +83,7 @@ Context:
 - Difficulty: ${selection.difficulty ?? "n/a"}
 - Dependencies: ${Array.isArray(selection.dependencies) ? selection.dependencies.join(", ") : "n/a"}
 
-SPEC Excerpt:\n\n${specBody.trim()}\n\nRules:\n- Keep diffs minimal; follow repo style.\n- Update docs/tests and .env.example when needed.\n- Do not commit secrets.\n- Small, verifiable commits.\n`;
+SPEC Excerpt:\n\n${specBody.trim()}\n\nRules:\n- Keep diffs minimal; follow repo style.\n- Update docs/tests and .env.example when needed.\n- Do not commit secrets.\n- Small, verifiable commits.\n- When this task is completed, update status.json to {\"state\": \"completed\"} to allow the orchestrator to proceed.\n`;
   fs.writeFileSync(promptPath, prompt);
 
   const status = { state: "prepared", notes: "Hand off this folder to IDE agent (Cline) to execute." };
