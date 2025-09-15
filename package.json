@@ -85,13 +85,19 @@
     "@expo/ngrok": "^4.1.0",
     "@types/react": "~19.0.10",
     "@eslint/eslintrc": "^3.1.0",
+    "concurrently": "^8.2.2",
     "eslint": "^9.31.0",
     "eslint-config-expo": "^9.2.0",
-    "typescript": "~5.8.3",
-    "concurrently": "^8.2.2"
+    "typescript": "~5.8.3"
   },
-  "keywords": ["react-native", "expo", "pets", "lost-found"],
+  "keywords": [
+    "react-native",
+    "expo",
+    "pets",
+    "lost-found"
+  ],
   "author": "PawGuard Team",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "packageManager": "npm@10"
 }
