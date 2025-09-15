@@ -77,8 +77,8 @@ function writeTaskScaffold(taskId, selection, specBody) {
   const prompt = `Task: ${taskId} — ${selection.description || "SPEC task"}
 
 Context:
-- Provider: ${selection.provider || "(inherit)"}
-- Model: ${selection.model || "(inherit)"}
+- Provider: ${prov ?? "(defer)"}
+- Model: ${model ?? "(defer)"}
 - Priority: ${selection.priority ?? "n/a"}
 - Difficulty: ${selection.difficulty ?? "n/a"}
 - Dependencies: ${Array.isArray(selection.dependencies) ? selection.dependencies.join(", ") : "n/a"}
@@ -114,39 +114,9 @@ function main() {
   const needle = String(taskId).split(":").pop().toLowerCase();
   const specMatch = specTasks.find((t) => t.title.toLowerCase().includes(needle)) || specTasks[0];
 
-  // Resolve provider/model by explicit selection, CLI, or heuristics (best model per task)
-  function includesAny(text, keys) {
-    const t = (text || "").toLowerCase();
-    return keys.some((k) => t.includes(k));
-  }
-  function defaultModelForProvider(p) {
-    if (p === "anthropic") return "claude-4.1-sonnet"; // coding/refactor default
-    if (p === "google") return "gemini-2.5-pro";      // multimodal/vision default
-    return "gpt-5-pro";                                 // OpenAI default
-  }
-  function resolveAssignment(selProv, cliProv, id, title, body) {
-    // 1) explicit provider
-    let p = selProv || cliProv;
-    // 2) heuristics if not provided
-    if (!p) {
-      if (includesAny(title + "\n" + body, ["brandify","parallax","image","poster","collage","vision"])) p = "google";
-      else if (includesAny(title + "\n" + body, ["architecture","roadmap","design","documentation"])) p = "anthropic"; // planning/docs → Opus later
-      else if (includesAny(title + "\n" + body, ["rls","policy","sql","supabase"])) p = "anthropic"; // policy/sql → Sonnet
-      else if (includesAny(title + "\n" + body, ["api","integration","http","client","container","docker","scalability","caching","performance"])) p = "openai";
-      else p = "anthropic";
-    }
-    // model selection
-    let m = selection.model || process.env.SPEC_MODEL || defaultModelForProvider(p);
-    // refine: planning/docs → Opus
-    if (!selection.model && p === "anthropic" && includesAny(title + "\n" + body, ["architecture","roadmap","design","documentation"])) {
-      m = "claude-4.1-opus";
-    }
-    return { prov: p, model: m };
-  }
-
-  const assignment = resolveAssignment(selection.provider, provider, taskId, specMatch?.title || "", specMatch?.body || "");
-  const prov = assignment.prov;
-  const model = assignment.model;
+  // Resolve provider/model: prefer explicit config/CLI; otherwise defer to agent
+  const prov = selection.provider || provider || null;
+  const model = selection.model || cliModel || process.env.SPEC_MODEL || null;
 
   const neededEnv = { openai: ["OPENAI_API_KEY"], anthropic: ["ANTHROPIC_API_KEY"], google: ["GOOGLE_API_KEY"] }[prov] || [];
   const missing = neededEnv.filter((k) => !process.env[k]);
@@ -162,8 +132,8 @@ function main() {
   }
 
   console.log("\n=== Spec Runner ===");
-  console.log(`Provider: ${prov}`);
-  console.log(`Model: ${model}`);
+  console.log(`Provider: ${prov ?? "(defer)"}`);
+  console.log(`Model: ${model ?? "(defer)"}`);
   console.log(`Selected: ${taskId}`);
   console.log(`Prepared: ${path.relative(process.cwd(), scaffold.dir)}`);
   console.log("Files:");
