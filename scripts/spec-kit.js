@@ -7,10 +7,11 @@ const { execSync } = require("child_process");
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  const out = { provider: null, task: null, mode: "run", branch: false };
+  const out = { provider: null, model: null, task: null, mode: "run", branch: false };
   for (let i = 0; i < args.length; i++) {
     const a = args[i];
     if ((a === "-p" || a === "--provider") && args[i + 1]) out.provider = args[++i];
+    else if ((a === "--model") && args[i + 1]) out.model = args[++i];
     else if ((a === "-t" || a === "--task") && args[i + 1]) out.task = args[++i];
     else if ((a === "-m" || a === "--mode") && args[i + 1]) out.mode = args[++i];
     else if (a === "--branch") out.branch = true;
@@ -44,17 +45,13 @@ function extractSpecTasks(md) {
 function pickConfigTask(cfg, wanted) {
   if (wanted && cfg.tasks && cfg.tasks[wanted]) return { id: wanted, def: cfg.tasks[wanted] };
   if (wanted && cfg.legacy && cfg.legacy[wanted]) return { id: wanted, def: cfg.legacy[wanted] };
-  if (cfg.tasks && Object.keys(cfg.tasks).length) {
-    const entries = Object.entries(cfg.tasks);
-    entries.sort((a, b) => (a[1].priority || 999) - (b[1].priority || 999));
-    return { id: entries[0][0], def: entries[0][1] };
-  }
+  // No explicit request: let SPEC drive task selection (do not auto-pick from config)
   return null;
 }
 
 function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
 
-function writeTaskScaffold(taskId, selection, specBody) {
+function writeTaskScaffold(taskId, selection, specBody, prov, model) {
   const safeId = String(taskId).replace(/[^a-zA-Z0-9_:-]/g, "_");
   const dir = path.resolve(process.cwd(), "spec_tasks", safeId);
   ensureDir(dir);
@@ -77,8 +74,8 @@ function writeTaskScaffold(taskId, selection, specBody) {
   const prompt = `Task: ${taskId} — ${selection.description || "SPEC task"}
 
 Context:
-- Provider: ${prov ?? "(defer)"}
-- Model: ${model ?? "(defer)"}
+- Provider: ${prov || "(defer)"}
+- Model: ${model || "(defer)"}
 - Priority: ${selection.priority ?? "n/a"}
 - Difficulty: ${selection.difficulty ?? "n/a"}
 - Dependencies: ${Array.isArray(selection.dependencies) ? selection.dependencies.join(", ") : "n/a"}
@@ -93,7 +90,7 @@ SPEC Excerpt:\n\n${specBody.trim()}\n\nRules:\n- Keep diffs minimal; follow repo
 }
 
 function main() {
-  const { provider, task, mode, branch } = parseArgs();
+  const { provider, model: cliModel, task, mode, branch } = parseArgs();
   const cfg = loadConfig();
   const md = loadSpec(cfg.specFile);
   const specTasks = extractSpecTasks(md);
@@ -114,15 +111,44 @@ function main() {
   const needle = String(taskId).split(":").pop().toLowerCase();
   const specMatch = specTasks.find((t) => t.title.toLowerCase().includes(needle)) || specTasks[0];
 
-  // Resolve provider/model: prefer explicit config/CLI; otherwise defer to agent
-  const prov = selection.provider || provider || null;
-  const model = selection.model || cliModel || process.env.SPEC_MODEL || null;
+  // Resolve provider/model: Spec‑Kit routes to best agent unless explicitly overridden
+  function includesAny(text, keys) {
+    const t = (text || "").toLowerCase();
+    return keys.some((k) => t.includes(k));
+  }
+  function routeProviderModel(sel, title, body) {
+    const hay = `${title}\n${body}\n${sel?.description || ""}`.toLowerCase();
+    // Vision/Brandify/Parallax → Gemini 2.5 Pro
+    if (includesAny(hay, ["brandify","parallax","image","poster","collage","vision"])) {
+      return { provider: "google", model: "gemini-2.5-pro" };
+    }
+    // API/Integration/HTTP/Container/Docker/Scalability/Caching/Performance → GPT‑5 Pro
+    if (includesAny(hay, ["api","integration","http","client","container","docker","scalability","caching","performance","latency","throughput"])) {
+      return { provider: "openai", model: "gpt-5-pro" };
+    }
+    // RLS/Policy/SQL/Supabase → Anthropic Claude Sonnet 4; hard/complex → Opus 4.1
+    const isPolicySql = includesAny(hay, ["rls","policy","sql","supabase","privacy","security"]);
+    const difficulty = (sel?.difficulty || "").toLowerCase();
+    const isComplex = difficulty === "hard" || includesAny(hay, ["architecture","migration","microservices","orchestration","complex","refactor large","design doc","planning"]);
+    if (isPolicySql || includesAny(hay, ["typescript","devex","lint","eslint","type-check"])) {
+      return { provider: "anthropic", model: isComplex ? "claude-4.1-opus" : "claude-4-sonnet" };
+    }
+    // Docs/planning → Anthropic Sonnet 4 (Opus only if explicitly set)
+    if (includesAny(hay, ["architecture","roadmap","design","documentation"])) {
+      return { provider: "anthropic", model: isComplex ? "claude-4.1-opus" : "claude-4-sonnet" };
+    }
+    // Fallback: Anthropic Sonnet 4
+    return { provider: "anthropic", model: "claude-4-sonnet" };
+  }
+  const routed = routeProviderModel(selection, specMatch?.title || "", specMatch?.body || "");
+  const prov = selection.provider || provider || routed.provider || null;
+  const model = selection.model || cliModel || process.env.SPEC_MODEL || routed.model || null;
 
   const neededEnv = { openai: ["OPENAI_API_KEY"], anthropic: ["ANTHROPIC_API_KEY"], google: ["GOOGLE_API_KEY"] }[prov] || [];
   const missing = neededEnv.filter((k) => !process.env[k]);
   if (missing.length) console.warn(`Warning: Missing env for provider ${prov}: ${missing.join(", ")}`);
 
-  const scaffold = writeTaskScaffold(taskId, { ...selection, model }, specMatch ? specMatch.body : md);
+  const scaffold = writeTaskScaffold(taskId, { ...selection, provider: prov, model }, specMatch ? specMatch.body : md, prov, model);
 
   if (branch) {
     try {
@@ -132,8 +158,8 @@ function main() {
   }
 
   console.log("\n=== Spec Runner ===");
-  console.log(`Provider: ${prov ?? "(defer)"}`);
-  console.log(`Model: ${model ?? "(defer)"}`);
+  console.log(`Provider: ${prov}`);
+  console.log(`Model: ${model}`);
   console.log(`Selected: ${taskId}`);
   console.log(`Prepared: ${path.relative(process.cwd(), scaffold.dir)}`);
   console.log("Files:");
