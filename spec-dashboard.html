@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawGuard Spec Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 20px;
+            height: calc(100vh - 40px);
+        }
+
+        .main-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .side-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .header h1 {
+            color: #1f2937;
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .refresh-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .refresh-btn:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tasks-section {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .task-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .task-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-item.selected {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .task-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .task-id {
+            font-weight: 700;
+            color: #1f2937;
+            font-size: 16px;
+        }
+
+        .task-status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-completed {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-in_progress {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .status-prepared {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-not_started {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .task-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .task-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            transition: width 0.3s ease;
+        }
+
+        .agent-item {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 8px;
+        }
+
+        .agent-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .agent-name {
+            font-weight: 600;
+            color: #1f2937;
+            font-size: 14px;
+        }
+
+        .agent-status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+
+        .agent-active {
+            background: #10b981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+        }
+
+        .agent-idle {
+            background: #f59e0b;
+        }
+
+        .agent-error {
+            background: #ef4444;
+        }
+
+        .agent-current-task {
+            font-size: 12px;
+            color: #3b82f6;
+            font-weight: 500;
+        }
+
+        .agent-meta {
+            font-size: 11px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #6b7280;
+            font-size: 12px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #d1d5db;
+            border-radius: 4px;
+            margin-right: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .checkbox.checked {
+            background: #3b82f6;
+            border-color: #3b82f6;
+        }
+
+        .checkbox.checked::after {
+            content: '✓';
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="main-panel">
+            <div class="header">
+                <h1>
+                    🚀 PawGuard Spec Dashboard
+                </h1>
+                <button class="refresh-btn" onclick="refreshData()">
+                    🔄 Yenile
+                </button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="completed-count">3</div>
+                    <div class="stat-label">Tamamlanan</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="in-progress-count">1</div>
+                    <div class="stat-label">Devam Eden</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="prepared-count">1</div>
+                    <div class="stat-label">Hazır</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-count">12</div>
+                    <div class="stat-label">Toplam Görev</div>
+                </div>
+            </div>
+
+            <div class="tasks-section">
+                <h2 class="section-title">
+                    📋 Görev Listesi
+                </h2>
+                <div id="tasks-container">
+                    <!-- Görevler buraya dinamik olarak eklenecek -->
+                </div>
+            </div>
+
+            <div class="last-updated">
+                Son güncelleme: <span id="last-update-time"></span>
+            </div>
+        </div>
+
+        <div class="side-panel">
+            <h2 class="section-title">
+                🤖 Agent Durumu
+            </h2>
+            <div id="agents-container">
+                <!-- Agent'lar buraya dinamik olarak eklenecek -->
+            </div>
+
+            <h2 class="section-title" style="margin-top: 24px;">
+                📊 Özet Rapor
+            </h2>
+            <div id="summary-container">
+                <div style="background: #f8fafc; padding: 12px; border-radius: 8px; font-size: 14px; line-height: 1.5;">
+                    <strong>Güncel Durum:</strong><br>
+                    • 3 görev başarıyla tamamlandı<br>
+                    • 1 görev aktif olarak işleniyor<br>
+                    • Claude-3.5-Sonnet RLS güvenlik çalışması yapıyor<br>
+                    • Sistem %75 tamamlanma oranında
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 24px;">
+                ⚡ Hızlı Eylemler
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <button class="refresh-btn" onclick="assignTask()" style="width: 100%;">
+                    📝 Yeni Görev Ata
+                </button>
+                <button class="refresh-btn" onclick="viewLogs()" style="width: 100%; background: #10b981;">
+                    📄 Logları Görüntüle
+                </button>
+                <button class="refresh-btn" onclick="exportReport()" style="width: 100%; background: #f59e0b;">
+                    📊 Rapor İndir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let tasks = [];
+        let agents = [];
+        let selectedTaskId = null;
+        let stats = {};
+
+        // API functions
+        async function fetchTasks() {
+            try {
+                const response = await fetch('/api/tasks');
+                if (response.ok) {
+                    tasks = await response.json();
+                    return tasks;
+                }
+            } catch (error) {
+                console.error('Error fetching tasks:', error);
+            }
+            return [];
+        }
+
+        async function fetchAgents() {
+            try {
+                const response = await fetch('/api/agents');
+                if (response.ok) {
+                    agents = await response.json();
+                    return agents;
+                }
+            } catch (error) {
+                console.error('Error fetching agents:', error);
+            }
+            return [];
+        }
+
+        async function fetchStats() {
+            try {
+                const response = await fetch('/api/status');
+                if (response.ok) {
+                    stats = await response.json();
+                    return stats;
+                }
+            } catch (error) {
+                console.error('Error fetching stats:', error);
+            }
+            return {};
+        }
+
+        async function updateTaskStatus(taskId, newStatus) {
+            try {
+                const response = await fetch(`/api/tasks/${taskId}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ status: newStatus })
+                });
+                
+                if (response.ok) {
+                    await loadAllData();
+                    return true;
+                }
+            } catch (error) {
+                console.error('Error updating task status:', error);
+            }
+            return false;
+        }
+
+        async function loadAllData() {
+            await Promise.all([
+                fetchTasks(),
+                fetchAgents(),
+                fetchStats()
+            ]);
+            
+            renderTasks();
+            renderAgents();
+            updateStats();
+            updateSummary();
+        }
+
+        function renderTasks() {
+            const container = document.getElementById('tasks-container');
+            container.innerHTML = '';
+
+            tasks.forEach(task => {
+                const taskElement = document.createElement('div');
+                taskElement.className = `task-item ${selectedTaskId === task.id ? 'selected' : ''}`;
+                taskElement.onclick = () => selectTask(task.id);
+
+                const checkbox = task.status === 'completed' ? 'checked' : '';
+                
+                taskElement.innerHTML = `
+                    <div class="task-header">
+                        <div style="display: flex; align-items: center;">
+                            <div class="checkbox ${checkbox}" onclick="toggleTask('${task.id}', event)"></div>
+                            <span class="task-id">${task.id}</span>
+                        </div>
+                        <span class="task-status status-${task.status}">${getStatusText(task.status)}</span>
+                    </div>
+                    <div class="task-title">${task.title}</div>
+                    <div class="task-meta">
+                        ${task.agent ? `🤖 ${task.agent}` : ''}
+                        ${task.assignee ? `👤 ${task.assignee}` : ''}
+                        ${task.lastUpdated ? `🕒 ${task.lastUpdated}` : ''}
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${task.progress}%"></div>
+                    </div>
+                `;
+
+                container.appendChild(taskElement);
+            });
+        }
+
+        function renderAgents() {
+            const container = document.getElementById('agents-container');
+            container.innerHTML = '';
+
+            agents.forEach(agent => {
+                const agentElement = document.createElement('div');
+                agentElement.className = 'agent-item';
+
+                agentElement.innerHTML = `
+                    <div class="agent-header">
+                        <span class="agent-name">${agent.name}</span>
+                        <div class="agent-status agent-${agent.status}"></div>
+                    </div>
+                    ${agent.currentTask ? `<div class="agent-current-task">${agent.currentTask}</div>` : ''}
+                    <div class="agent-meta">
+                        Son aktivite: ${agent.lastActivity} • ${agent.tasksCompleted} görev tamamlandı
+                    </div>
+                `;
+
+                container.appendChild(agentElement);
+            });
+        }
+
+        function updateStats() {
+            const completed = tasks.filter(t => t.status === 'completed').length;
+            const inProgress = tasks.filter(t => t.status === 'in_progress').length;
+            const prepared = tasks.filter(t => t.status === 'prepared').length;
+
+            document.getElementById('completed-count').textContent = completed;
+            document.getElementById('in-progress-count').textContent = inProgress;
+            document.getElementById('prepared-count').textContent = prepared;
+            document.getElementById('total-count').textContent = tasks.length;
+        }
+
+        function getStatusText(status) {
+            const statusMap = {
+                'completed': 'Tamamlandı',
+                'in_progress': 'Devam Ediyor',
+                'prepared': 'Hazır',
+                'not_started': 'Başlanmadı'
+            };
+            return statusMap[status] || status;
+        }
+
+        function selectTask(taskId) {
+            selectedTaskId = selectedTaskId === taskId ? null : taskId;
+            renderTasks();
+        }
+
+        async function toggleTask(taskId, event) {
+            event.stopPropagation();
+            const task = tasks.find(t => t.id === taskId);
+            if (task) {
+                const newStatus = task.status === 'completed' ? 'in_progress' : 'completed';
+                const success = await updateTaskStatus(taskId, newStatus);
+                
+                if (!success) {
+                    alert('Görev durumu güncellenirken hata oluştu!');
+                }
+            }
+        }
+
+        async function refreshData() {
+            document.getElementById('last-update-time').textContent = new Date().toLocaleTimeString('tr-TR');
+            await loadAllData();
+        }
+
+        function updateSummary() {
+            const summaryContainer = document.getElementById('summary-container');
+            const completed = tasks.filter(t => t.status === 'completed').length;
+            const inProgress = tasks.filter(t => t.status === 'in_progress').length;
+            const total = tasks.length;
+            const completionRate = total > 0 ? Math.round((completed / total) * 100) : 0;
+            
+            const activeAgent = agents.find(a => a.status === 'active');
+            const currentBranch = stats.branch || 'main';
+            const lastCommit = stats.commit ? `${stats.commit.hash} - ${stats.commit.message}` : 'Bilinmiyor';
+            
+            summaryContainer.innerHTML = `
+                <div style="background: #f8fafc; padding: 12px; border-radius: 8px; font-size: 14px; line-height: 1.5;">
+                    <strong>Güncel Durum:</strong><br>
+                    • ${completed} görev başarıyla tamamlandı<br>
+                    • ${inProgress} görev aktif olarak işleniyor<br>
+                    ${activeAgent ? `• ${activeAgent.name} ${activeAgent.currentTask || 'çalışıyor'}<br>` : ''}
+                    • Sistem %${completionRate} tamamlanma oranında<br>
+                    <br>
+                    <strong>Git Durumu:</strong><br>
+                    • Branch: ${currentBranch}<br>
+                    • Son commit: ${lastCommit}
+                </div>
+            `;
+        }
+
+        function assignTask() {
+            alert('Yeni görev atama özelliği yakında eklenecek!');
+        }
+
+        function viewLogs() {
+            alert('Log görüntüleme özelliği yakında eklenecek!');
+        }
+
+        function exportReport() {
+            alert('Rapor indirme özelliği yakında eklenecek!');
+        }
+
+        // Sayfa yüklendiğinde çalıştır
+        document.addEventListener('DOMContentLoaded', async function() {
+            document.getElementById('last-update-time').textContent = new Date().toLocaleTimeString('tr-TR');
+            
+            // İlk veri yüklemesi
+            await loadAllData();
+
+            // Her 30 saniyede bir otomatik yenile
+            setInterval(refreshData, 30000);
+        });
+    </script>
+</body>
+</html>

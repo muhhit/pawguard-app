@@ -1,9 +1,9 @@
 {
   "specFile": "SPEC.md",
   "tasks": {
-    "mobile:claude":  { "provider": "anthropic", "model": "claude-3-5-sonnet" },
-    "mobile:openai":  { "provider": "openai",    "model": "gpt-4o" },
-    "mobile:gemini":  { "provider": "google",    "model": "gemini-1.5-pro" }
+    "mobile:claude":  { "provider": "anthropic", "model": "claude-4-sonnet" },
+    "mobile:openai":  { "provider": "openai",    "model": "gpt-5-pro" },
+    "mobile:gemini":  { "provider": "google",    "model": "gemini-2.5-pro" },
+    "complex:claude": { "provider": "anthropic", "model": "claude-4.1-opus" }
   }
 }
-

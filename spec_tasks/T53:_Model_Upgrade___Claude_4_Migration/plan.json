@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Address Using Claude-3.5-sonnet instead of Claude-4-sonnet/Opus-4.1",
+  "agent": "optimus-claude",
+  "complexity": 4,
+  "unicornPotential": 3
+}

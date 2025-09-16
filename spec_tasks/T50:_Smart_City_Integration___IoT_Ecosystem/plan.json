@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Integration with smart city infrastructure and IoT ecosystem",
+  "agent": "optimus-claude",
+  "complexity": 4,
+  "unicornPotential": 4
+}

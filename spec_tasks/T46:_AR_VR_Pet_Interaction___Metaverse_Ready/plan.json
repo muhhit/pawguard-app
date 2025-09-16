@@ -1,0 +1,8 @@
+{
+  "provider": "google",
+  "model": "gemini-2.5-pro",
+  "description": "Augmented and Virtual Reality interfaces for pet interaction",
+  "agent": "jazz-gemini",
+  "complexity": 5,
+  "unicornPotential": 5
+}

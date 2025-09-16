@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Enhanced push notification system with rich media and actions",
+  "agent": "optimus-claude",
+  "complexity": 3,
+  "unicornPotential": 2
+}

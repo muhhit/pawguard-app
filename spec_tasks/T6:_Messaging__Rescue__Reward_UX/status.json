@@ -1,0 +1,11 @@
+{
+  "state": "completed",
+  "startedAt": "2025-09-15T20:53:42.677Z",
+  "completedAt": "2025-09-15T20:55:21.325Z",
+  "agent": "jazz-gemini",
+  "model": "gemini-2.5-pro",
+  "unicornPotential": 2,
+  "workTimeMs": 98647.57294247157,
+  "collectiveIntelligence": true,
+  "realImplementation": true
+}

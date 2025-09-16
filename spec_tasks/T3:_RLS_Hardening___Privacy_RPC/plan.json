@@ -1,0 +1,10 @@
+{
+  "id": "T3: RLS Hardening + Privacy RPC",
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": null,
+  "difficulty": null,
+  "priority": null,
+  "dependencies": [],
+  "createdAt": "2025-09-15T17:13:06.123Z"
+}

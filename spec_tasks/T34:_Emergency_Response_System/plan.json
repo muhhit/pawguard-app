@@ -1,0 +1,10 @@
+{
+  "id": "T34: Emergency Response System",
+  "provider": "openai",
+  "model": "gpt-5-pro",
+  "description": null,
+  "difficulty": null,
+  "priority": null,
+  "dependencies": [],
+  "createdAt": "2025-09-15T20:16:30.512Z"
+}

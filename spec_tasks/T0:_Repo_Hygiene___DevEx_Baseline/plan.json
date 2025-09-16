@@ -1,0 +1,10 @@
+{
+  "id": "T0: Repo Hygiene & DevEx Baseline",
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": null,
+  "difficulty": null,
+  "priority": null,
+  "dependencies": [],
+  "createdAt": "2025-09-16T07:24:53.977Z"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "T15: Social Features & Community Building",
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": null,
+  "difficulty": null,
+  "priority": null,
+  "dependencies": [],
+  "createdAt": "2025-09-15T20:16:14.170Z"
+}

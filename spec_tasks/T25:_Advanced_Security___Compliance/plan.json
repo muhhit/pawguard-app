@@ -1,0 +1,10 @@
+{
+  "id": "T25: Advanced Security & Compliance",
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": null,
+  "difficulty": null,
+  "priority": null,
+  "dependencies": [],
+  "createdAt": "2025-09-15T20:16:30.294Z"
+}
