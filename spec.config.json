@@ -4,6 +4,7 @@
     "mobile:claude":  { "provider": "anthropic", "model": "claude-4-sonnet" },
     "mobile:openai":  { "provider": "openai",    "model": "gpt-5-pro" },
     "mobile:gemini":  { "provider": "google",    "model": "gemini-2.5-pro" },
-    "complex:claude": { "provider": "anthropic", "model": "claude-4.1-opus" }
+    "complex:claude": { "provider": "anthropic", "model": "claude-4.1-opus" },
+    "copilot:github": { "provider": "github",   "model": "copilot-pro" }
   }
 }

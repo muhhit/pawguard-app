@@ -9,7 +9,18 @@ if (!supabaseUrl || !supabaseAnonKey) {
   console.warn('Supabase environment variables are not set. Using mock data/fallbacks.');
 }
 
-export const supabase = supabaseUrl && supabaseAnonKey
+// Only create client if we have valid URLs (not placeholder values)
+const isValidUrl = (url: string | undefined): boolean => {
+  if (!url || url.includes('your_') || url.includes('_here')) return false;
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+export const supabase = supabaseUrl && supabaseAnonKey && isValidUrl(supabaseUrl)
   ? createClient(supabaseUrl, supabaseAnonKey, {
       auth: {
         storage: AsyncStorage,
@@ -19,7 +30,7 @@ export const supabase = supabaseUrl && supabaseAnonKey
         debug: __DEV__,
       },
     })
-  : ({} as any);
+  : null;
 
 // Test connection on initialization
 if (__DEV__ && supabase && (supabase as any).auth) {

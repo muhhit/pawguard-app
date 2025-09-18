@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4.1-opus",
+  "description": "Quantum-enhanced pet location tracking using advanced physics algorithms",
+  "agent": "optimus-prime-opus",
+  "complexity": 5,
+  "unicornPotential": 5
+}

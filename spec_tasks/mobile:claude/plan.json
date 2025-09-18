@@ -1,7 +1,7 @@
 {
   "id": "mobile:claude",
   "provider": "anthropic",
-  "model": "claude-3-5-sonnet",
+  "model": "claude-opus-4.1-pro",
   "description": null,
   "difficulty": null,
   "priority": null,

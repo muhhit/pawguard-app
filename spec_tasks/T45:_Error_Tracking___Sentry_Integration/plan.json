@@ -1,8 +1,0 @@
-{
-  "provider": "anthropic",
-  "model": "claude-4-sonnet",
-  "description": "Integrate Sentry for production error tracking and monitoring",
-  "agent": "optimus-claude",
-  "complexity": 3,
-  "unicornPotential": 2
-}

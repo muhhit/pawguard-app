@@ -1,7 +1,7 @@
 {
   "provider": "anthropic",
   "model": "claude-4-sonnet",
-  "description": "Address Using Gemini-1.5-pro instead of Gemini-2.5-pro",
+  "description": "Address Using gemini-2.5-pro instead of Gemini-2.5-pro",
   "agent": "optimus-claude",
   "complexity": 4,
   "unicornPotential": 3

@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Implement health checks and system monitoring",
+  "agent": "optimus-claude",
+  "complexity": 3,
+  "unicornPotential": 3
+}

@@ -1,8 +1,0 @@
-{
-  "provider": "anthropic",
-  "model": "claude-4.1-opus",
-  "description": "Address Potential hardcoded API key",
-  "agent": "optimus-prime-opus",
-  "complexity": 5,
-  "unicornPotential": 5
-}

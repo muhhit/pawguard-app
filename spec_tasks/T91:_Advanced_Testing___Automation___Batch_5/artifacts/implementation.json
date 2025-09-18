@@ -1,0 +1,24 @@
+{
+  "taskId": "T91:_Advanced_Testing___Automation___Batch_5",
+  "agent": "jazz-gemini",
+  "model": "gemini-2.5-pro",
+  "role": "Performance & UX Specialist",
+  "expertise": [
+    "performance",
+    "ui",
+    "ux",
+    "media",
+    "optimization"
+  ],
+  "unicornPotential": 3,
+  "complexity": 4,
+  "implementedAt": "2025-09-16T13:45:25.654Z",
+  "files": [
+    "index.ts",
+    "service.ts",
+    "types.ts",
+    "utils.ts",
+    "unit.test.ts",
+    "integration.test.ts"
+  ]
+}

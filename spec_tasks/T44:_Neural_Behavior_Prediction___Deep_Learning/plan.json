@@ -1,0 +1,8 @@
+{
+  "provider": "openai",
+  "model": "gpt-5-pro",
+  "description": "Advanced neural networks for predicting pet behavior patterns",
+  "agent": "bumblebee-gpt",
+  "complexity": 5,
+  "unicornPotential": 5
+}

@@ -1,0 +1,11 @@
+{
+  "state": "completed",
+  "startedAt": "2025-09-16T14:07:49.662Z",
+  "completedAt": "2025-09-16T14:09:15.490Z",
+  "agent": "copilot-pro",
+  "model": "gemini-2.5-pro",
+  "unicornPotential": 1,
+  "workTimeMs": 85827.69390641229,
+  "collectiveIntelligence": true,
+  "realImplementation": true
+}

@@ -601,16 +601,53 @@
             `;
         }
 
-        function assignTask() {
-            alert('Yeni görev atama özelliği yakında eklenecek!');
+        async function assignTask() {
+            try {
+                const response = await fetch('/api/assign-task', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                const result = await response.json();
+                alert(result.message || 'Görev atama işlemi tamamlandı!');
+            } catch (error) {
+                alert('Görev atama sırasında hata oluştu: ' + error.message);
+            }
         }
 
-        function viewLogs() {
-            alert('Log görüntüleme özelliği yakında eklenecek!');
+        async function viewLogs() {
+            try {
+                const response = await fetch('/api/logs');
+                const logs = await response.json();
+                
+                let logText = 'Son Aktiviteler:\n\n';
+                logs.forEach(log => {
+                    logText += `${log.task}: ${log.status} (${log.agent}) - ${log.timestamp}\n`;
+                });
+                
+                alert(logText);
+            } catch (error) {
+                alert('Log görüntüleme sırasında hata oluştu: ' + error.message);
+            }
         }
 
-        function exportReport() {
-            alert('Rapor indirme özelliği yakında eklenecek!');
+        async function exportReport() {
+            try {
+                const response = await fetch('/api/report');
+                const blob = await response.blob();
+                
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'pawguard-spec-report.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                alert('Rapor başarıyla indirildi!');
+            } catch (error) {
+                alert('Rapor indirme sırasında hata oluştu: ' + error.message);
+            }
         }
 
         // Sayfa yüklendiğinde çalıştır

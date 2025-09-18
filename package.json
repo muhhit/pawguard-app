@@ -86,6 +86,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@expo/ngrok": "^4.1.0",
     "@types/react": "~19.0.10",
+    "babel-plugin-module-resolver": "^5.0.2",
     "concurrently": "^8.2.2",
     "eslint": "^9.31.0",
     "eslint-config-expo": "^9.2.0",
