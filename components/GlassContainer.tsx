@@ -51,7 +51,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(255, 255, 255, 0.85)',
     borderRadius: 16,
     backdropFilter: 'blur(10px)',
-    border: '1px solid rgba(255, 255, 255, 0.2)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.2)',
+    borderStyle: 'solid',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -63,7 +65,9 @@ const styles = StyleSheet.create({
   },
   webFallbackDark: {
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.1)',
+    borderStyle: 'solid',
   },
 });
 

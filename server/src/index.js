@@ -5,11 +5,11 @@ import { createClient } from '@supabase/supabase-js';
 import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
-let collageWorker = null; try { collageWorker = require('../workers/ugc-collage'); } catch {}
-let pdfGen = null; try { pdfGen = require('./pdf'); } catch {}
 
 // Import AutopilotSystem
 import { createRequire } from 'module';
+let collageWorker = null; try { collageWorker = require('../workers/ugc-collage'); } catch {}
+let pdfGen = null; try { pdfGen = require('./pdf'); } catch {}
 const require = createRequire(import.meta.url);
 const AutopilotSystem = require('../../scripts/autopilot-system.js');
 

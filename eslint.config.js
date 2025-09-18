@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
+import importPlugin from 'eslint-plugin-import';
 
 export default [
   js.configs.recommended,
@@ -26,6 +27,7 @@ export default [
     plugins: {
       '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
+      'import': importPlugin,
     },
     rules: {
       ...tseslint.configs.recommended.rules,

@@ -167,6 +167,119 @@ export class AIServiceManager {
   }
 
   /**
+   * Generate lost pet content with object parameter (for compatibility)
+   */
+  public static async generateLostPetContent(params: {
+    petName: string;
+    petType: string;
+    breed: string;
+    distinctiveFeatures: string[];
+    lastSeenLocation: string;
+  }): Promise<{ completion: string }> {
+    const result = await this.generateLostPetDescription(
+      params.petName,
+      params.petType,
+      params.breed,
+      params.distinctiveFeatures,
+      params.lastSeenLocation
+    );
+    return { completion: result };
+  }
+
+  /**
+   * Identify pet breed from description
+   */
+  public static async identifyBreed(description: string): Promise<string> {
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are a pet breed identification expert. Analyze descriptions and suggest the most likely breed(s). Be specific but acknowledge uncertainty when appropriate.'
+      },
+      {
+        role: 'user',
+        content: `Based on this description, what breed is this pet most likely to be? Description: ${description}`
+      }
+    ];
+
+    const result = await this.getCompletion(messages);
+    return result.completion;
+  }
+
+  /**
+   * Trigger lost pet automation workflow
+   */
+  public static async triggerLostPetAutomation(params: {
+    petId: string;
+    petName: string;
+    petType: string;
+    lastLocation: { lat: number; lng: number };
+    description: string;
+  }): Promise<void> {
+    console.log('🚨 Triggering lost pet automation for:', params.petName);
+    
+    // Generate enhanced alert description
+    const enhancedDescription = await this.generateLostPetDescription(
+      params.petName,
+      params.petType,
+      'Mixed breed', // Default if not specified
+      [params.description],
+      `Coordinates: ${params.lastLocation.lat}, ${params.lastLocation.lng}`
+    );
+
+    // Log the automation trigger (in real app, this would trigger notifications, social media posts, etc.)
+    console.log('📢 Lost pet automation triggered:', {
+      petId: params.petId,
+      enhancedDescription,
+      location: params.lastLocation
+    });
+  }
+
+  /**
+   * Trigger found pet automation workflow
+   */
+  public static async triggerFoundPetAutomation(params: {
+    petId: string;
+    petName: string;
+    foundLocation: { lat: number; lng: number };
+    finderContact?: string;
+  }): Promise<void> {
+    console.log('🎉 Triggering found pet automation for:', params.petName);
+    
+    // Generate celebration post
+    const celebrationPost = await this.generateCommunityPost(
+      'pet_found',
+      `${params.petName} has been found safe at coordinates ${params.foundLocation.lat}, ${params.foundLocation.lng}!`
+    );
+
+    // Log the automation trigger
+    console.log('🎊 Found pet automation triggered:', {
+      petId: params.petId,
+      celebrationPost,
+      location: params.foundLocation,
+      finderContact: params.finderContact
+    });
+  }
+
+  /**
+   * Get veterinary guidance for symptoms
+   */
+  public static async getVeterinaryGuidance(symptoms: string[]): Promise<string> {
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are a veterinary AI assistant providing educational guidance. Always emphasize the importance of consulting with a licensed veterinarian for proper diagnosis and treatment. Provide helpful general information while being clear about limitations.'
+      },
+      {
+        role: 'user',
+        content: `A pet owner is observing these symptoms: ${symptoms.join(', ')}. Provide general educational guidance about what these symptoms might indicate and when to seek veterinary care. Include emergency warning signs.`
+      }
+    ];
+
+    const result = await this.getCompletion(messages);
+    return result.completion;
+  }
+
+  /**
    * Generate community engagement content
    */
   public static async generateCommunityPost(

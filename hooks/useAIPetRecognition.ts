@@ -328,6 +328,18 @@ export const useAIPetRecognition = (options: UseAIPetRecognitionOptions = {}) =>
     console.log('🚫 AI recognition cancelled');
   }, []);
 
+  // Clear only last result
+  const clearResult = useCallback(() => {
+    setState(prev => ({
+      ...prev,
+      result: null,
+      error: null,
+      confidence: 0,
+      processingTime: 0,
+      progress: 0,
+    }));
+  }, []);
+
   // Reset state
   const reset = useCallback(() => {
     setState({
@@ -378,6 +390,7 @@ export const useAIPetRecognition = (options: UseAIPetRecognitionOptions = {}) =>
     findLostPetMatches,
     assessHealth,
     cancelRecognition,
+    clearResult,
     reset,
     clearCache,
     getCacheStats,

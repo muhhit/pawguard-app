@@ -6,7 +6,7 @@ import Animated, { useSharedValue, withRepeat, withTiming, useAnimatedStyle } fr
 export default function SkiaParallaxVideo({ uri, width = 340, height = 220, duration = 4000 }: { uri: string; width?: number; height?: number; duration?: number }) {
   let Skia: any = null;
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
+     
     Skia = require('@shopify/react-native-skia');
   } catch {}
 

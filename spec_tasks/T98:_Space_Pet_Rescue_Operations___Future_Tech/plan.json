@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4.1-opus",
+  "description": "Revolutionary space pet rescue operations implementation",
+  "agent": "optimus-prime-opus",
+  "complexity": 5,
+  "unicornPotential": 5
+}

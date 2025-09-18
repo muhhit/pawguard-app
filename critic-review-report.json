@@ -1,0 +1,5210 @@
+{
+  "timestamp": "2025-09-18T21:46:05.135Z",
+  "agent": "CRITIC-AGENT",
+  "summary": {
+    "totalTasks": 282,
+    "averageQuality": 6,
+    "excellentTasks": 0,
+    "goodTasks": 176,
+    "poorTasks": 106,
+    "criticalTasks": 60
+  },
+  "taskReviews": {
+    "FIX-1758059612604-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758059612604-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758059612605-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758059612605-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758059612605-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758059612605-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758060543208-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758060543208-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758060543208-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758060543208-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758060543208-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758060543208-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104563121-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104563121-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104563122-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104563122-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104563123-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104563123-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104587421-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104587421-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104587421-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104587421-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104587422-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104587422-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104598417-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104598417-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104598417-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104598417-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104598418-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104598418-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104638953-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104638953-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104638953-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104638953-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104638954-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104638954-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104679835-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104679835-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104679836-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104679836-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104679836-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104679836-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104745547-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104745547-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104745547-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104745547-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104745548-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104745548-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104756151-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104756151-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104756151-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104756151-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104756152-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104756152-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104789463-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104789463-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104789464-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104789464-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104789464-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104789464-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104875757-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104875757-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104875757-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104875757-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104875757-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104875757-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104947652-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104947652-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104947652-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104947652-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104947653-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104947653-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104959476-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758104959476-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104959477-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758104959477-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758104959477-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758104959477-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758105001063-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758105001063-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758105001063-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758105001063-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758105001064-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758105001064-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758105042311-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758105042311-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758105042312-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758105042312-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758105042312-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758105042312-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758107614979-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758107614979-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758107614979-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758107614979-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758107614980-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758107614980-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758107638688-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758107638688-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758107638688-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758107638688-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758107638688-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758107638688-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758111950183-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758111950183-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758111950186-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758111950186-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758111950187-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758111950187-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758114293342-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758114293342-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758114293343-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758114293343-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758114293343-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758114293343-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758114431713-0:_Fix__TSC_Issues": {
+      "taskId": "FIX-1758114431713-0:_Fix__TSC_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758114431713-1:_Fix__JEST_Issues": {
+      "taskId": "FIX-1758114431713-1:_Fix__JEST_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "FIX-1758114431714-2:_Fix__EXPO_DOCTOR_Issues": {
+      "taskId": "FIX-1758114431714-2:_Fix__EXPO_DOCTOR_Issues",
+      "qualityScore": 0,
+      "completeness": 0,
+      "codeQuality": 0,
+      "documentation": 0,
+      "testing": 0,
+      "innovation": 0,
+      "issues": [
+        "Görev başlatılmamış veya hazırlanmamış",
+        "Artifacts klasörü bulunamadı - hiçbir çıktı üretilmemiş"
+      ],
+      "strengths": [],
+      "recommendations": [
+        "🚨 ACIL: Bu görev tamamen yeniden yapılmalı"
+      ]
+    },
+    "T0:_Repo_Hygiene___DevEx_Baseline": {
+      "taskId": "T0:_Repo_Hygiene___DevEx_Baseline",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T100:_Robotic_Pet_Companions___Future_Tech": {
+      "taskId": "T100:_Robotic_Pet_Companions___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T100:_User_Experience___Accessibility___Batch_6": {
+      "taskId": "T100:_User_Experience___Accessibility___Batch_6",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T101:_API_Documentation___OpenAPI___Batch_6": {
+      "taskId": "T101:_API_Documentation___OpenAPI___Batch_6",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T102:_Monitoring___Health_Checks___Batch_6": {
+      "taskId": "T102:_Monitoring___Health_Checks___Batch_6",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T103:_Advanced_Testing___Automation___Batch_7": {
+      "taskId": "T103:_Advanced_Testing___Automation___Batch_7",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T104:_Performance_Optimization___Bundle_Size___Batch_7": {
+      "taskId": "T104:_Performance_Optimization___Bundle_Size___Batch_7",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T105:_Security_Audit___Vulnerability_Scan___Batch_7": {
+      "taskId": "T105:_Security_Audit___Vulnerability_Scan___Batch_7",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T106:_User_Experience___Accessibility___Batch_7": {
+      "taskId": "T106:_User_Experience___Accessibility___Batch_7",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T107:_API_Documentation___OpenAPI___Batch_7": {
+      "taskId": "T107:_API_Documentation___OpenAPI___Batch_7",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T108:_Monitoring___Health_Checks___Batch_7": {
+      "taskId": "T108:_Monitoring___Health_Checks___Batch_7",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T109:_Advanced_Testing___Automation___Batch_8": {
+      "taskId": "T109:_Advanced_Testing___Automation___Batch_8",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T10:_Release___EAS": {
+      "taskId": "T10:_Release___EAS",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T110:_Performance_Optimization___Bundle_Size___Batch_8": {
+      "taskId": "T110:_Performance_Optimization___Bundle_Size___Batch_8",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T111:_Security_Audit___Vulnerability_Scan___Batch_8": {
+      "taskId": "T111:_Security_Audit___Vulnerability_Scan___Batch_8",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T112:_User_Experience___Accessibility___Batch_8": {
+      "taskId": "T112:_User_Experience___Accessibility___Batch_8",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T113:_API_Documentation___OpenAPI___Batch_8": {
+      "taskId": "T113:_API_Documentation___OpenAPI___Batch_8",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T114:_Monitoring___Health_Checks___Batch_8": {
+      "taskId": "T114:_Monitoring___Health_Checks___Batch_8",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T115:_Advanced_Testing___Automation___Batch_9": {
+      "taskId": "T115:_Advanced_Testing___Automation___Batch_9",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T116:_Performance_Optimization___Bundle_Size___Batch_9": {
+      "taskId": "T116:_Performance_Optimization___Bundle_Size___Batch_9",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T117:_Security_Audit___Vulnerability_Scan___Batch_9": {
+      "taskId": "T117:_Security_Audit___Vulnerability_Scan___Batch_9",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T118:_User_Experience___Accessibility___Batch_9": {
+      "taskId": "T118:_User_Experience___Accessibility___Batch_9",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T119:_API_Documentation___OpenAPI___Batch_9": {
+      "taskId": "T119:_API_Documentation___OpenAPI___Batch_9",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T11:_External_Signals_Ingestion__Sources___Supabase_": {
+      "taskId": "T11:_External_Signals_Ingestion__Sources___Supabase_",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T120:_Monitoring___Health_Checks___Batch_9": {
+      "taskId": "T120:_Monitoring___Health_Checks___Batch_9",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T121:_Advanced_Testing___Automation___Batch_10": {
+      "taskId": "T121:_Advanced_Testing___Automation___Batch_10",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T122:_Performance_Optimization___Bundle_Size___Batch_10": {
+      "taskId": "T122:_Performance_Optimization___Bundle_Size___Batch_10",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T123:_Security_Audit___Vulnerability_Scan___Batch_10": {
+      "taskId": "T123:_Security_Audit___Vulnerability_Scan___Batch_10",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T124:_User_Experience___Accessibility___Batch_10": {
+      "taskId": "T124:_User_Experience___Accessibility___Batch_10",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T125:_API_Documentation___OpenAPI___Batch_10": {
+      "taskId": "T125:_API_Documentation___OpenAPI___Batch_10",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T126:_Monitoring___Health_Checks___Batch_10": {
+      "taskId": "T126:_Monitoring___Health_Checks___Batch_10",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T127:_Advanced_Testing___Automation___Batch_11": {
+      "taskId": "T127:_Advanced_Testing___Automation___Batch_11",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T128:_Performance_Optimization___Bundle_Size___Batch_11": {
+      "taskId": "T128:_Performance_Optimization___Bundle_Size___Batch_11",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T129:_Security_Audit___Vulnerability_Scan___Batch_11": {
+      "taskId": "T129:_Security_Audit___Vulnerability_Scan___Batch_11",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T12:_Agent_Orchestration___Eval__LangGraph___LiteLLM___promptfoo_": {
+      "taskId": "T12:_Agent_Orchestration___Eval__LangGraph___LiteLLM___promptfoo_",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T130:_User_Experience___Accessibility___Batch_11": {
+      "taskId": "T130:_User_Experience___Accessibility___Batch_11",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T131:_API_Documentation___OpenAPI___Batch_11": {
+      "taskId": "T131:_API_Documentation___OpenAPI___Batch_11",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T132:_Monitoring___Health_Checks___Batch_11": {
+      "taskId": "T132:_Monitoring___Health_Checks___Batch_11",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T133:_Advanced_Testing___Automation___Batch_12": {
+      "taskId": "T133:_Advanced_Testing___Automation___Batch_12",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T134:_Performance_Optimization___Bundle_Size___Batch_12": {
+      "taskId": "T134:_Performance_Optimization___Bundle_Size___Batch_12",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T135:_Security_Audit___Vulnerability_Scan___Batch_12": {
+      "taskId": "T135:_Security_Audit___Vulnerability_Scan___Batch_12",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T136:_User_Experience___Accessibility___Batch_12": {
+      "taskId": "T136:_User_Experience___Accessibility___Batch_12",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T137:_API_Documentation___OpenAPI___Batch_12": {
+      "taskId": "T137:_API_Documentation___OpenAPI___Batch_12",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T138:_Monitoring___Health_Checks___Batch_12": {
+      "taskId": "T138:_Monitoring___Health_Checks___Batch_12",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T139:_Advanced_Testing___Automation___Batch_13": {
+      "taskId": "T139:_Advanced_Testing___Automation___Batch_13",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T13:_Advanced_Pet_Recognition___AI_Features": {
+      "taskId": "T13:_Advanced_Pet_Recognition___AI_Features",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T140:_Performance_Optimization___Bundle_Size___Batch_13": {
+      "taskId": "T140:_Performance_Optimization___Bundle_Size___Batch_13",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T141:_Security_Audit___Vulnerability_Scan___Batch_13": {
+      "taskId": "T141:_Security_Audit___Vulnerability_Scan___Batch_13",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T142:_User_Experience___Accessibility___Batch_13": {
+      "taskId": "T142:_User_Experience___Accessibility___Batch_13",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T143:_API_Documentation___OpenAPI___Batch_13": {
+      "taskId": "T143:_API_Documentation___OpenAPI___Batch_13",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T144:_Monitoring___Health_Checks___Batch_13": {
+      "taskId": "T144:_Monitoring___Health_Checks___Batch_13",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T145:_Advanced_Testing___Automation___Batch_14": {
+      "taskId": "T145:_Advanced_Testing___Automation___Batch_14",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T146:_Performance_Optimization___Bundle_Size___Batch_14": {
+      "taskId": "T146:_Performance_Optimization___Bundle_Size___Batch_14",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T147:_Security_Audit___Vulnerability_Scan___Batch_14": {
+      "taskId": "T147:_Security_Audit___Vulnerability_Scan___Batch_14",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T148:_User_Experience___Accessibility___Batch_14": {
+      "taskId": "T148:_User_Experience___Accessibility___Batch_14",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T149:_API_Documentation___OpenAPI___Batch_14": {
+      "taskId": "T149:_API_Documentation___OpenAPI___Batch_14",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T14:_Geofencing___Safe_Zones": {
+      "taskId": "T14:_Geofencing___Safe_Zones",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T150:_Monitoring___Health_Checks___Batch_14": {
+      "taskId": "T150:_Monitoring___Health_Checks___Batch_14",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T151:_Advanced_Testing___Automation___Batch_15": {
+      "taskId": "T151:_Advanced_Testing___Automation___Batch_15",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T152:_Performance_Optimization___Bundle_Size___Batch_15": {
+      "taskId": "T152:_Performance_Optimization___Bundle_Size___Batch_15",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T153:_Security_Audit___Vulnerability_Scan___Batch_15": {
+      "taskId": "T153:_Security_Audit___Vulnerability_Scan___Batch_15",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T154:_User_Experience___Accessibility___Batch_15": {
+      "taskId": "T154:_User_Experience___Accessibility___Batch_15",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T155:_API_Documentation___OpenAPI___Batch_15": {
+      "taskId": "T155:_API_Documentation___OpenAPI___Batch_15",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T156:_Monitoring___Health_Checks___Batch_15": {
+      "taskId": "T156:_Monitoring___Health_Checks___Batch_15",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T157:_Advanced_Testing___Automation___Batch_16": {
+      "taskId": "T157:_Advanced_Testing___Automation___Batch_16",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T158:_Performance_Optimization___Bundle_Size___Batch_16": {
+      "taskId": "T158:_Performance_Optimization___Bundle_Size___Batch_16",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T159:_Security_Audit___Vulnerability_Scan___Batch_16": {
+      "taskId": "T159:_Security_Audit___Vulnerability_Scan___Batch_16",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T15:_Social_Features___Community_Building": {
+      "taskId": "T15:_Social_Features___Community_Building",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T160:_User_Experience___Accessibility___Batch_16": {
+      "taskId": "T160:_User_Experience___Accessibility___Batch_16",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T161:_API_Documentation___OpenAPI___Batch_16": {
+      "taskId": "T161:_API_Documentation___OpenAPI___Batch_16",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T162:_Monitoring___Health_Checks___Batch_16": {
+      "taskId": "T162:_Monitoring___Health_Checks___Batch_16",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T163:_Advanced_Testing___Automation___Batch_17": {
+      "taskId": "T163:_Advanced_Testing___Automation___Batch_17",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T164:_Performance_Optimization___Bundle_Size___Batch_17": {
+      "taskId": "T164:_Performance_Optimization___Bundle_Size___Batch_17",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T165:_Security_Audit___Vulnerability_Scan___Batch_17": {
+      "taskId": "T165:_Security_Audit___Vulnerability_Scan___Batch_17",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T166:_User_Experience___Accessibility___Batch_17": {
+      "taskId": "T166:_User_Experience___Accessibility___Batch_17",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T167:_API_Documentation___OpenAPI___Batch_17": {
+      "taskId": "T167:_API_Documentation___OpenAPI___Batch_17",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T168:_Monitoring___Health_Checks___Batch_17": {
+      "taskId": "T168:_Monitoring___Health_Checks___Batch_17",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T169:_Advanced_Testing___Automation___Batch_18": {
+      "taskId": "T169:_Advanced_Testing___Automation___Batch_18",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T16:_Veterinary_Integration___Health_Tracking": {
+      "taskId": "T16:_Veterinary_Integration___Health_Tracking",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T170:_Performance_Optimization___Bundle_Size___Batch_18": {
+      "taskId": "T170:_Performance_Optimization___Bundle_Size___Batch_18",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T171:_Security_Audit___Vulnerability_Scan___Batch_18": {
+      "taskId": "T171:_Security_Audit___Vulnerability_Scan___Batch_18",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T172:_User_Experience___Accessibility___Batch_18": {
+      "taskId": "T172:_User_Experience___Accessibility___Batch_18",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T173:_API_Documentation___OpenAPI___Batch_18": {
+      "taskId": "T173:_API_Documentation___OpenAPI___Batch_18",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T174:_Monitoring___Health_Checks___Batch_18": {
+      "taskId": "T174:_Monitoring___Health_Checks___Batch_18",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T17:_Advanced_Search___Filtering": {
+      "taskId": "T17:_Advanced_Search___Filtering",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T18:_Real-time_Chat___Video_Calls": {
+      "taskId": "T18:_Real-time_Chat___Video_Calls",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T19:_Gamification___Rewards_System": {
+      "taskId": "T19:_Gamification___Rewards_System",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T1:_Payments___Iyzico_Integration__Backend___App_": {
+      "taskId": "T1:_Payments___Iyzico_Integration__Backend___App_",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T20:_Multi-language_Support___Localization": {
+      "taskId": "T20:_Multi-language_Support___Localization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T21:_Advanced_Analytics___Reporting": {
+      "taskId": "T21:_Advanced_Analytics___Reporting",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T22:_API_Gateway___Rate_Limiting": {
+      "taskId": "T22:_API_Gateway___Rate_Limiting",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T23:_Advanced_Caching___Performance": {
+      "taskId": "T23:_Advanced_Caching___Performance",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T24:_Backup___Disaster_Recovery": {
+      "taskId": "T24:_Backup___Disaster_Recovery",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T25:_Advanced_Security___Compliance": {
+      "taskId": "T25:_Advanced_Security___Compliance",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T26:_Machine_Learning_Pipeline": {
+      "taskId": "T26:_Machine_Learning_Pipeline",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T27:_Advanced_Notifications___Alerts": {
+      "taskId": "T27:_Advanced_Notifications___Alerts",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T28:_Integration_Testing___E2E_Tests": {
+      "taskId": "T28:_Integration_Testing___E2E_Tests",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T29:_Advanced_Monitoring___Observability": {
+      "taskId": "T29:_Advanced_Monitoring___Observability",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T2:_Push_Dispatch___Nearby_Alerts": {
+      "taskId": "T2:_Push_Dispatch___Nearby_Alerts",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T30:_Content_Management___Moderation": {
+      "taskId": "T30:_Content_Management___Moderation",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T31:_Advanced_Location_Services": {
+      "taskId": "T31:_Advanced_Location_Services",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T32:_Payment_Processing___Billing": {
+      "taskId": "T32:_Payment_Processing___Billing",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T33:_Advanced_Pet_Matching_Algorithm": {
+      "taskId": "T33:_Advanced_Pet_Matching_Algorithm",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T34:_Emergency_Response_System": {
+      "taskId": "T34:_Emergency_Response_System",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T35:_Advanced_Data_Pipeline": {
+      "taskId": "T35:_Advanced_Data_Pipeline",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T36:_Mobile_App_Optimization": {
+      "taskId": "T36:_Mobile_App_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T37:_Advanced_User_Experience": {
+      "taskId": "T37:_Advanced_User_Experience",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T38:_Integration_with_External_Services": {
+      "taskId": "T38:_Integration_with_External_Services",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T39:_Advanced_Reporting___Business_Intelligence": {
+      "taskId": "T39:_Advanced_Reporting___Business_Intelligence",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T3:_RLS_Hardening___Privacy_RPC": {
+      "taskId": "T3:_RLS_Hardening___Privacy_RPC",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T40:_Scalability___Load_Balancing": {
+      "taskId": "T40:_Scalability___Load_Balancing",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T41:_Advanced_Security_Monitoring": {
+      "taskId": "T41:_Advanced_Security_Monitoring",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T42:_Production_Readiness___Launch": {
+      "taskId": "T42:_Production_Readiness___Launch",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T43:_Quantum_Pet_Tracking___Advanced_Physics": {
+      "taskId": "T43:_Quantum_Pet_Tracking___Advanced_Physics",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T44:_Neural_Behavior_Prediction___Deep_Learning": {
+      "taskId": "T44:_Neural_Behavior_Prediction___Deep_Learning",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T45:_Blockchain_Pet_Identity___Web3_Integration": {
+      "taskId": "T45:_Blockchain_Pet_Identity___Web3_Integration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T46:_AR_VR_Pet_Interaction___Metaverse_Ready": {
+      "taskId": "T46:_AR_VR_Pet_Interaction___Metaverse_Ready",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T46:_Analytics___Firebase_Google_Analytics": {
+      "taskId": "T46:_Analytics___Firebase_Google_Analytics",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T47:_Autonomous_Drone_Rescue___AI_Coordination": {
+      "taskId": "T47:_Autonomous_Drone_Rescue___AI_Coordination",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T48:_Biometric_Pet_Authentication___Advanced_Security": {
+      "taskId": "T48:_Biometric_Pet_Authentication___Advanced_Security",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T48:_Push_Notifications___OneSignal_Enhancement": {
+      "taskId": "T48:_Push_Notifications___OneSignal_Enhancement",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T49:_Image_Optimization___WebP_Compression": {
+      "taskId": "T49:_Image_Optimization___WebP_Compression",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T49:_Predictive_Health_Analytics___Medical_AI": {
+      "taskId": "T49:_Predictive_Health_Analytics___Medical_AI",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T4:_Parallax___Brandify__Media_": {
+      "taskId": "T4:_Parallax___Brandify__Media_",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T50:_Performance_Monitoring___Flipper_Integration": {
+      "taskId": "T50:_Performance_Monitoring___Flipper_Integration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T50:_Smart_City_Integration___IoT_Ecosystem": {
+      "taskId": "T50:_Smart_City_Integration___IoT_Ecosystem",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T51:_Model_Upgrade___GPT_5_Pro_Migration": {
+      "taskId": "T51:_Model_Upgrade___GPT_5_Pro_Migration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T52:_Model_Upgrade___Claude_4_Migration": {
+      "taskId": "T52:_Model_Upgrade___Claude_4_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T52:_Model_Upgrade___GPT_5_Pro_Migration": {
+      "taskId": "T52:_Model_Upgrade___GPT_5_Pro_Migration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T53:_Model_Upgrade___Claude_4_Migration": {
+      "taskId": "T53:_Model_Upgrade___Claude_4_Migration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T53:_Model_Upgrade___Gemini_2_5_Migration": {
+      "taskId": "T53:_Model_Upgrade___Gemini_2_5_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T54:_Model_Upgrade___Claude_4_Migration": {
+      "taskId": "T54:_Model_Upgrade___Claude_4_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T54:_Model_Upgrade___Gemini_2_5_Migration": {
+      "taskId": "T54:_Model_Upgrade___Gemini_2_5_Migration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T55:_Model_Upgrade___GPT_5_Pro_Migration": {
+      "taskId": "T55:_Model_Upgrade___GPT_5_Pro_Migration",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T55:_Model_Upgrade___Gemini_2_5_Migration": {
+      "taskId": "T55:_Model_Upgrade___Gemini_2_5_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T56:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T56:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T56:_Model_Upgrade___Claude_4_Migration": {
+      "taskId": "T56:_Model_Upgrade___Claude_4_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T57:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T57:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T57:_Model_Upgrade___Gemini_2_5_Migration": {
+      "taskId": "T57:_Model_Upgrade___Gemini_2_5_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T58:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T58:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T58:_Model_Upgrade___GPT_5_Pro_Migration": {
+      "taskId": "T58:_Model_Upgrade___GPT_5_Pro_Migration",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T59:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T59:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T5:_Offline_Resilience": {
+      "taskId": "T5:_Offline_Resilience",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T60:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T60:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T61:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T61:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T62:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T62:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T63:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T63:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T64:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T64:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T65:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T65:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T66:_AI_Pet_Consciousness_Transfer___Future_Tech": {
+      "taskId": "T66:_AI_Pet_Consciousness_Transfer___Future_Tech",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T66:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T66:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T67:_Advanced_Caching___Performance_Optimization": {
+      "taskId": "T67:_Advanced_Caching___Performance_Optimization",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T67:_Advanced_Testing___Automation___Batch_1": {
+      "taskId": "T67:_Advanced_Testing___Automation___Batch_1",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T68:_Performance_Optimization___Bundle_Size___Batch_1": {
+      "taskId": "T68:_Performance_Optimization___Bundle_Size___Batch_1",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T68:_Security_Hardening___Secret_Management": {
+      "taskId": "T68:_Security_Hardening___Secret_Management",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T69:_Genetic_Pet_Enhancement___Future_Tech": {
+      "taskId": "T69:_Genetic_Pet_Enhancement___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T69:_Security_Audit___Vulnerability_Scan___Batch_1": {
+      "taskId": "T69:_Security_Audit___Vulnerability_Scan___Batch_1",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T6:_Messaging__Rescue__Reward_UX": {
+      "taskId": "T6:_Messaging__Rescue__Reward_UX",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T70:_Robotic_Pet_Companions___Future_Tech": {
+      "taskId": "T70:_Robotic_Pet_Companions___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T70:_User_Experience___Accessibility___Batch_1": {
+      "taskId": "T70:_User_Experience___Accessibility___Batch_1",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T71:_API_Documentation___OpenAPI___Batch_1": {
+      "taskId": "T71:_API_Documentation___OpenAPI___Batch_1",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T71:_Quantum_Computing_Integration___Future_Tech": {
+      "taskId": "T71:_Quantum_Computing_Integration___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T72:_Holographic_Pet_Display___Future_Tech": {
+      "taskId": "T72:_Holographic_Pet_Display___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T72:_Monitoring___Health_Checks___Batch_1": {
+      "taskId": "T72:_Monitoring___Health_Checks___Batch_1",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T73:_Advanced_Testing___Automation___Batch_2": {
+      "taskId": "T73:_Advanced_Testing___Automation___Batch_2",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T73:_Telepathic_Pet_Communication___Future_Tech": {
+      "taskId": "T73:_Telepathic_Pet_Communication___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T74:_Performance_Optimization___Bundle_Size___Batch_2": {
+      "taskId": "T74:_Performance_Optimization___Bundle_Size___Batch_2",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T74:_Time_Travel_Pet_Recovery___Future_Tech": {
+      "taskId": "T74:_Time_Travel_Pet_Recovery___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T75:_Interdimensional_Pet_Tracking___Future_Tech": {
+      "taskId": "T75:_Interdimensional_Pet_Tracking___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T75:_Security_Audit___Vulnerability_Scan___Batch_2": {
+      "taskId": "T75:_Security_Audit___Vulnerability_Scan___Batch_2",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T76:_AI_Pet_Consciousness_Transfer___Future_Tech": {
+      "taskId": "T76:_AI_Pet_Consciousness_Transfer___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T76:_User_Experience___Accessibility___Batch_2": {
+      "taskId": "T76:_User_Experience___Accessibility___Batch_2",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T77:_API_Documentation___OpenAPI___Batch_2": {
+      "taskId": "T77:_API_Documentation___OpenAPI___Batch_2",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T77:_Nano_Pet_Health_Monitoring___Future_Tech": {
+      "taskId": "T77:_Nano_Pet_Health_Monitoring___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T78:_Monitoring___Health_Checks___Batch_2": {
+      "taskId": "T78:_Monitoring___Health_Checks___Batch_2",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T78:_Space_Pet_Rescue_Operations___Future_Tech": {
+      "taskId": "T78:_Space_Pet_Rescue_Operations___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T79:_Advanced_Testing___Automation___Batch_3": {
+      "taskId": "T79:_Advanced_Testing___Automation___Batch_3",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T79:_Genetic_Pet_Enhancement___Future_Tech": {
+      "taskId": "T79:_Genetic_Pet_Enhancement___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T7:_Observability___Analytics": {
+      "taskId": "T7:_Observability___Analytics",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T80:_Performance_Optimization___Bundle_Size___Batch_3": {
+      "taskId": "T80:_Performance_Optimization___Bundle_Size___Batch_3",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T80:_Robotic_Pet_Companions___Future_Tech": {
+      "taskId": "T80:_Robotic_Pet_Companions___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T81:_Quantum_Computing_Integration___Future_Tech": {
+      "taskId": "T81:_Quantum_Computing_Integration___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T81:_Security_Audit___Vulnerability_Scan___Batch_3": {
+      "taskId": "T81:_Security_Audit___Vulnerability_Scan___Batch_3",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T82:_Holographic_Pet_Display___Future_Tech": {
+      "taskId": "T82:_Holographic_Pet_Display___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T82:_User_Experience___Accessibility___Batch_3": {
+      "taskId": "T82:_User_Experience___Accessibility___Batch_3",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T83:_API_Documentation___OpenAPI___Batch_3": {
+      "taskId": "T83:_API_Documentation___OpenAPI___Batch_3",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T83:_Telepathic_Pet_Communication___Future_Tech": {
+      "taskId": "T83:_Telepathic_Pet_Communication___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T84:_Monitoring___Health_Checks___Batch_3": {
+      "taskId": "T84:_Monitoring___Health_Checks___Batch_3",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T84:_Time_Travel_Pet_Recovery___Future_Tech": {
+      "taskId": "T84:_Time_Travel_Pet_Recovery___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T85:_Advanced_Testing___Automation___Batch_4": {
+      "taskId": "T85:_Advanced_Testing___Automation___Batch_4",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T85:_Interdimensional_Pet_Tracking___Future_Tech": {
+      "taskId": "T85:_Interdimensional_Pet_Tracking___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T86:_AI_Pet_Consciousness_Transfer___Future_Tech": {
+      "taskId": "T86:_AI_Pet_Consciousness_Transfer___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T86:_Performance_Optimization___Bundle_Size___Batch_4": {
+      "taskId": "T86:_Performance_Optimization___Bundle_Size___Batch_4",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T87:_Nano_Pet_Health_Monitoring___Future_Tech": {
+      "taskId": "T87:_Nano_Pet_Health_Monitoring___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T87:_Security_Audit___Vulnerability_Scan___Batch_4": {
+      "taskId": "T87:_Security_Audit___Vulnerability_Scan___Batch_4",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T88:_Space_Pet_Rescue_Operations___Future_Tech": {
+      "taskId": "T88:_Space_Pet_Rescue_Operations___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T88:_User_Experience___Accessibility___Batch_4": {
+      "taskId": "T88:_User_Experience___Accessibility___Batch_4",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T89:_API_Documentation___OpenAPI___Batch_4": {
+      "taskId": "T89:_API_Documentation___OpenAPI___Batch_4",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T89:_Genetic_Pet_Enhancement___Future_Tech": {
+      "taskId": "T89:_Genetic_Pet_Enhancement___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T8:_Image_Performance___Poster_Collage": {
+      "taskId": "T8:_Image_Performance___Poster_Collage",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T90:_Monitoring___Health_Checks___Batch_4": {
+      "taskId": "T90:_Monitoring___Health_Checks___Batch_4",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T90:_Robotic_Pet_Companions___Future_Tech": {
+      "taskId": "T90:_Robotic_Pet_Companions___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T91:_Advanced_Testing___Automation___Batch_5": {
+      "taskId": "T91:_Advanced_Testing___Automation___Batch_5",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T91:_Quantum_Computing_Integration___Future_Tech": {
+      "taskId": "T91:_Quantum_Computing_Integration___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T92:_Holographic_Pet_Display___Future_Tech": {
+      "taskId": "T92:_Holographic_Pet_Display___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T92:_Performance_Optimization___Bundle_Size___Batch_5": {
+      "taskId": "T92:_Performance_Optimization___Bundle_Size___Batch_5",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T93:_Security_Audit___Vulnerability_Scan___Batch_5": {
+      "taskId": "T93:_Security_Audit___Vulnerability_Scan___Batch_5",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T93:_Telepathic_Pet_Communication___Future_Tech": {
+      "taskId": "T93:_Telepathic_Pet_Communication___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T94:_Time_Travel_Pet_Recovery___Future_Tech": {
+      "taskId": "T94:_Time_Travel_Pet_Recovery___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T94:_User_Experience___Accessibility___Batch_5": {
+      "taskId": "T94:_User_Experience___Accessibility___Batch_5",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T95:_API_Documentation___OpenAPI___Batch_5": {
+      "taskId": "T95:_API_Documentation___OpenAPI___Batch_5",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T95:_Interdimensional_Pet_Tracking___Future_Tech": {
+      "taskId": "T95:_Interdimensional_Pet_Tracking___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T96:_AI_Pet_Consciousness_Transfer___Future_Tech": {
+      "taskId": "T96:_AI_Pet_Consciousness_Transfer___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T96:_Monitoring___Health_Checks___Batch_5": {
+      "taskId": "T96:_Monitoring___Health_Checks___Batch_5",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T97:_Advanced_Testing___Automation___Batch_6": {
+      "taskId": "T97:_Advanced_Testing___Automation___Batch_6",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T97:_Nano_Pet_Health_Monitoring___Future_Tech": {
+      "taskId": "T97:_Nano_Pet_Health_Monitoring___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T98:_Performance_Optimization___Bundle_Size___Batch_6": {
+      "taskId": "T98:_Performance_Optimization___Bundle_Size___Batch_6",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T98:_Space_Pet_Rescue_Operations___Future_Tech": {
+      "taskId": "T98:_Space_Pet_Rescue_Operations___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T99:_Expo_Go_TypeScript_Fixes": {
+      "taskId": "T99:_Expo_Go_TypeScript_Fixes",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T99:_Genetic_Pet_Enhancement___Future_Tech": {
+      "taskId": "T99:_Genetic_Pet_Enhancement___Future_Tech",
+      "qualityScore": 6,
+      "completeness": 10,
+      "codeQuality": 4,
+      "documentation": 3,
+      "testing": 2,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "2 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "1 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": [
+        "⚠️ Bu görev iyileştirme gerektirir"
+      ]
+    },
+    "T99:_Security_Audit___Vulnerability_Scan___Batch_6": {
+      "taskId": "T99:_Security_Audit___Vulnerability_Scan___Batch_6",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    },
+    "T9:_Security___Supply_Chain": {
+      "taskId": "T9:_Security___Supply_Chain",
+      "qualityScore": 8,
+      "completeness": 10,
+      "codeQuality": 10,
+      "documentation": 3,
+      "testing": 4,
+      "innovation": 10,
+      "issues": [],
+      "strengths": [
+        "Görev başarıyla tamamlanmış",
+        "6 kod dosyası oluşturulmuş",
+        "1 dokümantasyon dosyası mevcut",
+        "2 test dosyası oluşturulmuş",
+        "Yüksek inovasyon potansiyeli"
+      ],
+      "recommendations": []
+    }
+  },
+  "topPerformers": [
+    {
+      "taskId": "T0:_Repo_Hygiene___DevEx_Baseline",
+      "score": 8
+    },
+    {
+      "taskId": "T100:_User_Experience___Accessibility___Batch_6",
+      "score": 8
+    },
+    {
+      "taskId": "T101:_API_Documentation___OpenAPI___Batch_6",
+      "score": 8
+    },
+    {
+      "taskId": "T102:_Monitoring___Health_Checks___Batch_6",
+      "score": 8
+    },
+    {
+      "taskId": "T103:_Advanced_Testing___Automation___Batch_7",
+      "score": 8
+    },
+    {
+      "taskId": "T104:_Performance_Optimization___Bundle_Size___Batch_7",
+      "score": 8
+    },
+    {
+      "taskId": "T105:_Security_Audit___Vulnerability_Scan___Batch_7",
+      "score": 8
+    },
+    {
+      "taskId": "T106:_User_Experience___Accessibility___Batch_7",
+      "score": 8
+    },
+    {
+      "taskId": "T107:_API_Documentation___OpenAPI___Batch_7",
+      "score": 8
+    },
+    {
+      "taskId": "T108:_Monitoring___Health_Checks___Batch_7",
+      "score": 8
+    }
+  ],
+  "worstPerformers": [
+    {
+      "taskId": "FIX-1758059612604-0:_Fix__TSC_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758059612605-1:_Fix__JEST_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758059612605-2:_Fix__EXPO_DOCTOR_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758060543208-0:_Fix__TSC_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758060543208-1:_Fix__JEST_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758060543208-2:_Fix__EXPO_DOCTOR_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758104563121-0:_Fix__TSC_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758104563122-1:_Fix__JEST_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758104563123-2:_Fix__EXPO_DOCTOR_Issues",
+      "score": 0
+    },
+    {
+      "taskId": "FIX-1758104587421-0:_Fix__TSC_Issues",
+      "score": 0
+    }
+  ],
+  "systemRecommendations": [
+    "⚠️ Sistem kalitesi orta seviyede, iyileştirme gerekli",
+    "🔥 60 kritik görev acilen düzeltilmeli"
+  ]
+}

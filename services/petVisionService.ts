@@ -55,6 +55,27 @@ export interface VisionOptions {
   enableBreedIdentification?: boolean;
   enableLostPetMatching?: boolean;
   priority?: 'speed' | 'accuracy';
+  useEdgeML?: boolean;
+}
+
+export interface PetRecognitionResult extends PetAnalysisResult {}
+
+export interface BatchProcessingResult {
+  results: PetAnalysisResult[];
+  totalProcessed: number;
+  successCount: number;
+  failureCount: number;
+  averageProcessingTime: number;
+}
+
+export interface MatchingPet {
+  id: string;
+  name: string;
+  breed: string;
+  similarity: number;
+  lastSeen: string;
+  location: { lat: number; lng: number };
+  imageUrl: string;
 }
 
 // Configuration
@@ -289,6 +310,101 @@ class PetVisionService {
     });
     
     return result.breed;
+  }
+
+  /**
+   * Process multiple images in batch
+   */
+  async processBatch(imageUris: string[], options: VisionOptions = {}): Promise<BatchProcessingResult> {
+    const startTime = Date.now();
+    const results: PetAnalysisResult[] = [];
+    let successCount = 0;
+    let failureCount = 0;
+
+    console.log(`🔄 Processing batch of ${imageUris.length} images`);
+
+    for (const imageUri of imageUris) {
+      try {
+        const result = await this.recognizePet(imageUri, options);
+        results.push(result);
+        successCount++;
+      } catch (error) {
+        console.error(`❌ Failed to process image ${imageUri}:`, error);
+        failureCount++;
+        // Add failed result
+        results.push({
+          breed: 'Processing Failed',
+          confidence: 0,
+          species: 'other',
+          characteristics: {
+            size: 'medium',
+            coat: 'unknown',
+            color: ['unknown'],
+            age: 'unknown',
+          },
+          processingTime: 0,
+        });
+      }
+    }
+
+    const totalTime = Date.now() - startTime;
+    const averageTime = results.length > 0 ? totalTime / results.length : 0;
+
+    return {
+      results,
+      totalProcessed: imageUris.length,
+      successCount,
+      failureCount,
+      averageProcessingTime: averageTime
+    };
+  }
+
+  /**
+   * Find matching lost pets using image similarity
+   */
+  async findMatchingLostPets(imageUri: string, location?: { lat: number; lng: number }): Promise<MatchingPet[]> {
+    console.log('🔍 Finding matching lost pets for image');
+    
+    try {
+      // In a real implementation, this would use advanced image similarity algorithms
+      // For now, we'll return mock data based on location proximity
+      const mockMatches: MatchingPet[] = [
+        {
+          id: 'lost-pet-1',
+          name: 'Max',
+          breed: 'Golden Retriever',
+          similarity: 0.94,
+          lastSeen: '2 hours ago',
+          location: location || { lat: 41.0082, lng: 28.9784 }, // Istanbul default
+          imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=300'
+        },
+        {
+          id: 'lost-pet-2',
+          name: 'Luna',
+          breed: 'Labrador Mix',
+          similarity: 0.87,
+          lastSeen: '1 day ago',
+          location: location || { lat: 41.0082, lng: 28.9784 },
+          imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300'
+        },
+        {
+          id: 'lost-pet-3',
+          name: 'Bella',
+          breed: 'German Shepherd',
+          similarity: 0.82,
+          lastSeen: '3 days ago',
+          location: location || { lat: 41.0082, lng: 28.9784 },
+          imageUrl: 'https://images.unsplash.com/photo-1551717743-49959800b1f6?w=300'
+        }
+      ];
+
+      // Filter by confidence threshold
+      return mockMatches.filter(match => match.similarity > VISION_CONFIG.CONFIDENCE_THRESHOLD);
+      
+    } catch (error) {
+      console.error('❌ Failed to find matching lost pets:', error);
+      return [];
+    }
   }
 
   /**

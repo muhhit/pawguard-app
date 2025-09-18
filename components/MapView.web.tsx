@@ -10,6 +10,9 @@ import { WebView } from 'react-native-webview';
 import { MapPin, Navigation, Plus, Lock } from 'lucide-react-native';
 import { useLocation, LocationData } from '@/hooks/location-store';
 import { Pet } from '@/hooks/pet-store';
+import { useAuth } from '@/hooks/auth-store';
+
+import { MapViewProps } from './MapView';
 // import { getLocationForUser, type UserType } from '@/utils/locationPrivacy';
 type UserType = 'owner' | 'public' | 'finder';
 
@@ -22,9 +25,6 @@ const getLocationForUser = (petId: string, userType: UserType, lat: number, lng:
     isDelayed: userType !== 'owner'
   };
 };
-import { useAuth } from '@/hooks/auth-store';
-
-import { MapViewProps } from './MapView';
 
 const MAPBOX_TOKEN = 'pk.eyJ1Ijoib2ctIiwiYSI6ImNtZjRmbm40aDA0bzIybHNremg5ajRoanQifQ.3y-bv35IQB2WBRbN6eeB9Q';
 

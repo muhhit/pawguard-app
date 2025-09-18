@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+/* eslint-env node */
+/* eslint-disable no-unused-vars */
+/* global process, __dirname, setTimeout, console */
 
 const fs = require('fs');
 const path = require('path');
@@ -22,7 +25,7 @@ function getGitInfo() {
     const date = execSync('git log -1 --pretty=%cd --date=relative', { encoding: 'utf8' }).trim();
     
     return { branch, hash, message, date };
-  } catch (error) {
+  } catch (_error) {
     return { 
       branch: 'unknown', 
       hash: 'unknown', 
@@ -141,26 +144,28 @@ function getProgressFromStatus(status) {
 /**
  * Events memory'den eventleri yükle (mock)
  */
+const eventsMemory = [
+  {
+    id: 'evt_001',
+    type: 'task_completed',
+    taskId: 'T43',
+    agent: 'optimus-claude',
+    timestamp: new Date(Date.now() - 60000).toISOString(),
+    message: 'Quantum Pet Tracking completed successfully'
+  },
+  {
+    id: 'evt_002',
+    type: 'task_started',
+    taskId: 'T66',
+    agent: 'jazz-gemini',
+    timestamp: new Date().toISOString(),
+    message: 'AI Pet Consciousness Transfer started'
+  }
+];
+
 function loadEvents() {
   // Bu gerçek implementasyonda orchestrator'dan gelecek
-  return [
-    {
-      id: 'evt_001',
-      type: 'task_completed',
-      taskId: 'T43',
-      agent: 'optimus-claude',
-      timestamp: new Date(Date.now() - 60000).toISOString(),
-      message: 'Quantum Pet Tracking completed successfully'
-    },
-    {
-      id: 'evt_002',
-      type: 'task_started',
-      taskId: 'T66',
-      agent: 'jazz-gemini',
-      timestamp: new Date().toISOString(),
-      message: 'AI Pet Consciousness Transfer started'
-    }
-  ];
+  return eventsMemory;
 }
 
 /**
@@ -574,14 +579,44 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(response, null, 2));
       
+    } else if (pathname === '/runtime' && req.method === 'GET') {
+      // Runtime endpoint
+      const { snapshot } = require('./runtime/assignments.cjs');
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(snapshot()));
+      
+    } else if (pathname.startsWith('/task') && req.method === 'GET') {
+      // Task detay endpoint
+      const id = parsedUrl.query.id;
+      // transcript'ı event hafızasından toparla
+      const transcript = eventsMemory.filter(e => e.type === 'message' && e.taskId === id).map(e => e.message);
+      const merged = eventsMemory.findLast?.(e => e.type==='merge:complete' && e.merged && e.taskId===id) || null;
+      const completed = eventsMemory.findLast?.(e => e.type==='task:complete' && e.taskId===id) || null;
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ id, transcript, merged, completed }));
+      
     } else if (pathname === '/api/spec-stats') {
       // SPEC istatistikleri
       const specStats = getSpecStats();
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify(specStats));
       
+    } else if (pathname === '/spec/scan' && req.method === 'GET') {
+      // SPEC scan endpoint - prepared görevleri döndür
+      const tasks = loadTasksFromSpecTasks();
+      const preparedTasks = tasks.filter(task => 
+        task.status === null || task.status === 'prepared'
+      );
+      
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({
+        tasks: preparedTasks,
+        count: preparedTasks.length,
+        timestamp: new Date().toISOString()
+      }));
+      
     } else if (pathname === '/run-batch' && req.method === 'POST') {
-      // Run batch endpoint with fairness and concurrency
+      // Run batch endpoint with deduplication, fairness and concurrency
       let body = '';
       
       req.on('data', chunk => {
@@ -591,22 +626,30 @@ const server = http.createServer((req, res) => {
       req.on('end', async () => {
         try {
           const data = JSON.parse(body);
-          const tasks = data.tasks || [];
+          let tasks = data.tasks || [];
+          
+          // Deduplication: Aynı title'ları tekilleştir
+          const deduplicatedTasks = deduplicateTasksByTitle(tasks);
+          const duplicatesRemoved = tasks.length - deduplicatedTasks.length;
+          
+          console.log(`🔄 [DEDUP] ${tasks.length} görevden ${duplicatesRemoved} duplicate kaldırıldı, ${deduplicatedTasks.length} unique görev kaldı`);
           
           // Concurrency parametresi yoksa ajan sayısı kadar ata
           const agents = await getAvailableAgents();
           const concurrency = data.concurrency || agents.length || 3;
           
           // Fairness motoru ile görev dağılımı
-          const distribution = distributeTasks(tasks, agents, concurrency);
+          const distribution = distributeTasks(deduplicatedTasks, agents, concurrency);
           
           res.writeHead(200, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({
             success: true,
-            tasksScheduled: tasks.length,
+            originalTaskCount: tasks.length,
+            duplicatesRemoved: duplicatesRemoved,
+            tasksScheduled: deduplicatedTasks.length,
             concurrency: concurrency,
             distribution: distribution,
-            message: `${tasks.length} görev ${concurrency} eşzamanlı işlem ile başlatıldı`
+            message: `${deduplicatedTasks.length} unique görev ${concurrency} eşzamanlı işlem ile başlatıldı (${duplicatesRemoved} duplicate kaldırıldı)`
           }));
           
           // Arka planda görevleri başlat
@@ -636,7 +679,7 @@ const server = http.createServer((req, res) => {
           
           res.writeHead(success ? 200 : 404, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ success }));
-        } catch (error) {
+        } catch (_error) {
           res.writeHead(400, { 'Content-Type': 'application/json' });
           res.end(JSON.stringify({ error: 'Invalid JSON' }));
         }
@@ -800,6 +843,27 @@ const server = http.createServer((req, res) => {
 });
 
 /**
+ * Görevleri title'a göre tekilleştir (deduplication)
+ */
+function deduplicateTasksByTitle(tasks) {
+  const seen = new Map();
+  const deduplicated = [];
+  
+  tasks.forEach(task => {
+    const title = task.title || task.id || 'untitled';
+    
+    if (!seen.has(title)) {
+      seen.set(title, true);
+      deduplicated.push(task);
+    } else {
+      console.log(`🔄 [DEDUP] Duplicate task removed: ${title} (${task.id})`);
+    }
+  });
+  
+  return deduplicated;
+}
+
+/**
  * Mevcut ajanları al
  */
 async function getAvailableAgents() {
@@ -908,7 +972,7 @@ function calculateAgentScore(task, agent, currentLoad) {
 /**
  * Görev önceliği hesapla
  */
-function calculatePriority(task, agent) {
+function calculatePriority(task, _agent) {
   let priority = 5; // Normal priority
   
   if (task.status === 'prepared') priority += 2;

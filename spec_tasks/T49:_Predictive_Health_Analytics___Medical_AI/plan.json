@@ -1,0 +1,8 @@
+{
+  "provider": "openai",
+  "model": "gpt-5-pro",
+  "description": "AI-powered predictive health analytics for preventive pet care",
+  "agent": "bumblebee-gpt",
+  "complexity": 5,
+  "unicornPotential": 5
+}

@@ -1,0 +1,8 @@
+{
+  "state": "prepared",
+  "type": "fix",
+  "priority": "high",
+  "createdAt": "2025-09-17T10:24:39.835Z",
+  "source": "guard-scan",
+  "failureType": "tsc"
+}

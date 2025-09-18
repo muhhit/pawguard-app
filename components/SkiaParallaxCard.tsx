@@ -8,7 +8,7 @@ type Props = { uri: string; width?: number; height?: number; autoPlay?: boolean 
 export default function SkiaParallaxCard({ uri, width = 340, height = 220, autoPlay = true }: Props) {
   let Skia: any = null;
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
+     
     Skia = require('@shopify/react-native-skia');
   } catch {
     Skia = null;

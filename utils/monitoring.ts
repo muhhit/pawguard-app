@@ -1,6 +1,6 @@
 let SentryMod: any = null;
 try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+   
   SentryMod = require('@sentry/react-native');
 } catch {}
 
