@@ -1,0 +1,7 @@
+// Minimal Metro config aligned with Expo SDK
+const { getDefaultConfig } = require('@expo/metro-config');
+
+const config = getDefaultConfig(__dirname);
+
+module.exports = config;
+

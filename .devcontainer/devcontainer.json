@@ -19,11 +19,11 @@
   "containerEnv": {
     "NODE_ENV": "development"
   },
-  "forwardPorts": [5173, 19000],
+  "forwardPorts": [5173, 8081, 19000],
   "portsAttributes": {
     "5173": { "label": "Optimus Dashboard" },
+    "8081": { "label": "Metro Bundler" },
     "19000": { "label": "Expo Dev" }
   },
   "postStartCommand": "bash -lc 'if [ -f .env ]; then source scripts/codespaces-init.sh || true; fi; nohup node server/dashboard.cjs >/workspaces/pawguard-dashboard.log 2>&1 &'"
 }
-

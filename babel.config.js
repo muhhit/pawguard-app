@@ -14,6 +14,8 @@ module.exports = function (api) {
       ],
       // Required for expo-router
       'expo-router/babel',
+      // Must be last for Reanimated v3
+      'react-native-reanimated/plugin',
     ],
   };
 };
