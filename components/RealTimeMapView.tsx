@@ -26,6 +26,12 @@ interface RealTimeMapViewProps {
   showHeatmap?: boolean;
   onPetSelect?: (pet: PetLocation) => void;
   clustered?: boolean;
+  geofences?: any[];
+  show3D?: boolean;
+  showAR?: boolean;
+  onGeofenceCreate?: (geofence: any) => void;
+  onLocationUpdate?: (location: any) => void;
+  offlineMode?: boolean;
 }
 
 export const RealTimeMapView: React.FC<RealTimeMapViewProps> = ({
@@ -33,6 +39,12 @@ export const RealTimeMapView: React.FC<RealTimeMapViewProps> = ({
   showHeatmap = false,
   onPetSelect,
   clustered = true,
+  geofences = [],
+  show3D = false,
+  showAR = false,
+  onGeofenceCreate,
+  onLocationUpdate,
+  offlineMode = false,
 }) => {
   const { currentLocation } = useLocation();
   const [selectedPet, setSelectedPet] = useState<PetLocation | null>(null);
@@ -56,7 +68,7 @@ export const RealTimeMapView: React.FC<RealTimeMapViewProps> = ({
           type: pet.type as 'dog' | 'cat',
           owner_id: '',
           breed: '',
-          age: 0,
+          age: '0',
           weight: 0,
           color: '',
           description: '',
@@ -71,6 +83,7 @@ export const RealTimeMapView: React.FC<RealTimeMapViewProps> = ({
           },
           reward_amount: pet.reward || 0,
           photos: [],
+          medical_records: [],
           created_at: '',
           updated_at: ''
         }))}

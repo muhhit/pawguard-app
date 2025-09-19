@@ -147,7 +147,7 @@ export default function PrivacyProtectionSystem({
   };
 
   const getMaliciousUserWarning = () => {
-    if (petType === 'street' && selectedLevel?.radiusBlur < 500) {
+    if (petType === 'street' && selectedLevel?.radiusBlur && selectedLevel.radiusBlur < 500) {
       return (
         <View style={styles.warningContainer}>
           <Text style={styles.warningTitle}>⚠️ Güvenlik Uyarısı</Text>

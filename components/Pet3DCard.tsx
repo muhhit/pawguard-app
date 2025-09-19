@@ -123,7 +123,7 @@ export const Pet3DCard: React.FC<Pet3DCardProps> = ({ pet, onPress, index }) => 
             <OptimizedImage
               source={{ uri: pet.photos[0] }}
               style={styles.petImage}
-              placeholder="loading"
+              placeholder={true}
             />
             
             {/* 3D Effect Overlay */}
