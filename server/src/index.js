@@ -8,6 +8,11 @@ import fetch from 'node-fetch';
 let collageWorker = null; try { collageWorker = require('../workers/ugc-collage'); } catch {}
 let pdfGen = null; try { pdfGen = require('./pdf'); } catch {}
 
+// Import AutopilotSystem
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const AutopilotSystem = require('../../scripts/autopilot-system.js');
+
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: '2mb' }));
@@ -17,8 +22,121 @@ const supabase = (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE)
   ? createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE)
   : null;
 
+// Initialize Autopilot System
+const autopilot = new AutopilotSystem();
+
 app.get('/health', (req, res) => {
   res.json({ ok: true });
+});
+
+// Autopilot endpoint
+app.post('/autopilot', async (req, res) => {
+  try {
+    const { enabled, mode = 'safe', periodMs = 600000, concurrency = 2, maxTasks = 6 } = req.body || {};
+    
+    if (enabled === undefined) {
+      return res.status(400).json({ error: 'enabled parameter required' });
+    }
+    
+    const config = autopilot.updateConfig({
+      enabled,
+      mode,
+      periodMs,
+      concurrency,
+      maxTasks
+    });
+    
+    const status = autopilot.getStatus();
+    
+    console.log(`🤖 [AUTOPILOT] ${enabled ? 'Enabled' : 'Disabled'} - Mode: ${mode}`);
+    
+    res.json({
+      success: true,
+      status,
+      message: `Autopilot ${enabled ? 'enabled' : 'disabled'} in ${mode} mode`
+    });
+  } catch (error) {
+    console.error('Autopilot error:', error);
+    res.status(500).json({ error: 'autopilot_failed', details: error.message });
+  }
+});
+
+// Agents status endpoint
+app.get('/agents', async (req, res) => {
+  try {
+    const specTasksDir = path.join(process.cwd(), 'spec_tasks');
+    const agents = [];
+    
+    if (!fs.existsSync(specTasksDir)) {
+      return res.json({ agents: [], total: 0, active: 0, completed: 0 });
+    }
+    
+    const taskDirs = fs.readdirSync(specTasksDir)
+      .filter(dir => dir.startsWith('T') && dir.includes(':'))
+      .sort();
+    
+    let activeCount = 0;
+    let completedCount = 0;
+    
+    for (const taskDir of taskDirs) {
+      const taskPath = path.join(specTasksDir, taskDir);
+      const statusPath = path.join(taskPath, 'status.json');
+      const planPath = path.join(taskPath, 'plan.json');
+      
+      let status = { state: 'unknown' };
+      let plan = {};
+      
+      if (fs.existsSync(statusPath)) {
+        try {
+          status = JSON.parse(fs.readFileSync(statusPath, 'utf8'));
+        } catch (e) {
+          console.error(`Error reading status for ${taskDir}:`, e);
+        }
+      }
+      
+      if (fs.existsSync(planPath)) {
+        try {
+          plan = JSON.parse(fs.readFileSync(planPath, 'utf8'));
+        } catch (e) {
+          console.error(`Error reading plan for ${taskDir}:`, e);
+        }
+      }
+      
+      const agent = {
+        id: taskDir,
+        name: taskDir.split(':_')[1] || taskDir,
+        status: status.state,
+        model: plan.model || 'unknown',
+        provider: plan.provider || 'unknown',
+        complexity: plan.complexity || 1,
+        unicornPotential: plan.unicornPotential || 1,
+        lastUpdate: status.lastUpdate || 'unknown',
+        notes: status.notes || ''
+      };
+      
+      agents.push(agent);
+      
+      if (status.state === 'completed') {
+        completedCount++;
+      } else if (status.state === 'running' || status.state === 'in_progress') {
+        activeCount++;
+      }
+    }
+    
+    const autopilotStatus = autopilot.getStatus();
+    
+    res.json({
+      agents,
+      total: agents.length,
+      active: activeCount,
+      completed: completedCount,
+      autopilot: autopilotStatus,
+      timestamp: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('Agents status error:', error);
+    res.status(500).json({ error: 'agents_status_failed', details: error.message });
+  }
 });
 
 // Brandify (Premium) mock endpoint

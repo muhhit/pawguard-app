@@ -1,0 +1,22 @@
+{
+  "servers": [
+    {
+      "name": "filesystem",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "/workspaces/pawguard-app"],
+      "description": "File system access for project files"
+    },
+    {
+      "name": "git",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-git", "/workspaces/pawguard-app"],
+      "description": "Git repository operations"
+    },
+    {
+      "name": "sqlite",
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-sqlite", "--db-path", "./local/pawguard.db"],
+      "description": "SQLite database operations"
+    }
+  ]
+}

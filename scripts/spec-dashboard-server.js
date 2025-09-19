@@ -5,6 +5,33 @@ const path = require('path');
 const http = require('http');
 const url = require('url');
 
+// SPEC.md'den gerçek görev bilgilerini yükle
+function loadRealSpecTasks() {
+  try {
+    const specContent = fs.readFileSync('SPEC.md', 'utf8');
+    const tasks = new Map();
+    
+    // Görevleri parse et
+    const taskMatches = specContent.matchAll(/### (T\d+): (.+?)\n- Goal: (.+?)\n- Actions: (.+?)\n- Acceptance: (.+?)(?=\n\n|\n###|$)/gs);
+    
+    for (const match of taskMatches) {
+      const [, taskId, title, goal, actions, acceptance] = match;
+      tasks.set(taskId, {
+        id: taskId,
+        title: title.trim(),
+        goal: goal.trim(),
+        actions: actions.trim(),
+        acceptance: acceptance.trim()
+      });
+    }
+    
+    return tasks;
+  } catch (error) {
+    console.error('SPEC.md okunamadı:', error.message);
+    return new Map();
+  }
+}
+
 // SPEC verilerini okuma fonksiyonları
 function getTaskStatus(taskDir) {
   try {
@@ -41,14 +68,35 @@ function getTaskDescription(taskDir) {
     const handoffPath = path.join('spec_tasks', taskDir, 'agent-handoff.md');
     if (fs.existsSync(handoffPath)) {
       const content = fs.readFileSync(handoffPath, 'utf8');
-      const titleMatch = content.match(/Task: (.+?) — SPEC task/);
+      
+      // Önce tam format'ı dene: "Task: T43: Title — SPEC task"
+      let titleMatch = content.match(/Task: T\d+: (.+?) — SPEC task/);
+      if (titleMatch) {
+        return titleMatch[1];
+      }
+      
+      // Sonra kısa format'ı dene: "Task: T43 — SPEC task"
+      titleMatch = content.match(/Task: (T\d+) — SPEC task/);
+      if (titleMatch) {
+        // SPEC Excerpt'ten title'ı çıkarmaya çalış
+        const specMatch = content.match(/### (T\d+: .+?)(?:\n|$)/);
+        if (specMatch) {
+          return specMatch[1];
+        }
+        return titleMatch[1];
+      }
+      
+      // Genel format: "Task: ... — SPEC task"
+      titleMatch = content.match(/Task: (.+?) — SPEC task/);
       if (titleMatch) {
         return titleMatch[1];
       }
     }
-    return taskDir.replace(/[_:]/g, ' ');
+    
+    // Son çare: klasör adından çıkar
+    return taskDir.replace(/T\d+:_?/, '').replace(/_/g, ' ');
   } catch (error) {
-    return taskDir;
+    return taskDir.replace(/T\d+:_?/, '').replace(/_/g, ' ');
   }
 }
 
@@ -172,23 +220,44 @@ function getMobileAgents() {
     return [];
   }
   
-  const mobileDirs = fs.readdirSync(specTasksDir)
-    .filter(dir => dir.startsWith('mobile:'))
-    .sort();
+  // Gerçek agent'ları task'lardan topla
+  const taskDirs = fs.readdirSync(specTasksDir)
+    .filter(dir => fs.statSync(path.join(specTasksDir, dir)).isDirectory())
+    .filter(dir => dir.startsWith('T') && dir.includes(':'));
   
-  return mobileDirs.map(dir => {
-    const status = getTaskStatus(dir);
-    const agent = getTaskAgent(dir);
-    const name = dir.replace('mobile:', '');
+  const agents = new Map();
+  
+  taskDirs.forEach(taskDir => {
+    const status = getTaskStatus(taskDir);
+    const agent = getTaskAgent(taskDir);
     
-    return {
-      name: agent || name,
-      currentTask: status === 'in_progress' ? 'Mobile Development' : null,
-      status: status === 'completed' ? 'idle' : status === 'in_progress' ? 'active' : 'idle',
-      lastActivity: getFileModificationDate(path.join('spec_tasks', dir, 'status.json')) || 'Bilinmiyor',
-      tasksCompleted: status === 'completed' ? 1 : 0
-    };
+    if (agent) {
+      if (!agents.has(agent)) {
+        agents.set(agent, {
+          name: agent,
+          currentTask: null,
+          status: 'idle',
+          lastActivity: 'Bilinmiyor',
+          tasksCompleted: 0
+        });
+      }
+      
+      const agentData = agents.get(agent);
+      if (status === 'completed') {
+        agentData.tasksCompleted++;
+      } else if (status === 'in_progress') {
+        agentData.currentTask = taskDir.replace(/T\d+:/, '').replace(/_/g, ' ');
+        agentData.status = 'active';
+      }
+      
+      const lastActivity = getFileModificationDate(path.join('spec_tasks', taskDir, 'status.json'));
+      if (lastActivity) {
+        agentData.lastActivity = lastActivity;
+      }
+    }
   });
+  
+  return Array.from(agents.values());
 }
 
 function updateTaskStatus(taskId, newStatus) {
@@ -276,6 +345,70 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify({ error: 'Invalid JSON' }));
       }
     });
+    
+  } else if (pathname === '/api/assign-task' && req.method === 'POST') {
+    // Yeni görev atama
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Görev atama sistemi aktif değil. Optimus Prime otomatik görev dağıtımı yapıyor.' 
+    }));
+    
+  } else if (pathname === '/api/logs') {
+    // Log görüntüleme
+    try {
+      const logs = [];
+      const taskDirs = fs.readdirSync('spec_tasks')
+        .filter(dir => fs.statSync(path.join('spec_tasks', dir)).isDirectory())
+        .slice(-10); // Son 10 task
+      
+      taskDirs.forEach(taskDir => {
+        const statusPath = path.join('spec_tasks', taskDir, 'status.json');
+        if (fs.existsSync(statusPath)) {
+          const status = JSON.parse(fs.readFileSync(statusPath, 'utf8'));
+          logs.push({
+            task: taskDir,
+            status: status.state,
+            timestamp: status.completedAt || status.startedAt || 'Bilinmiyor',
+            agent: status.agent || 'Bilinmiyor'
+          });
+        }
+      });
+      
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify(logs));
+    } catch (error) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Log okuma hatası' }));
+    }
+    
+  } else if (pathname === '/api/report') {
+    // Rapor indirme
+    const tasks = getAllTasks();
+    const agents = getMobileAgents();
+    const stats = {
+      completed: tasks.filter(t => t.status === 'completed').length,
+      in_progress: tasks.filter(t => t.status === 'in_progress').length,
+      prepared: tasks.filter(t => t.status === 'prepared').length,
+      total: tasks.length,
+      branch: getCurrentBranch(),
+      commit: getLastCommit(),
+      timestamp: new Date().toISOString()
+    };
+    
+    const report = {
+      summary: stats,
+      tasks: tasks,
+      agents: agents,
+      generatedAt: new Date().toISOString(),
+      version: '1.0.0'
+    };
+    
+    res.writeHead(200, { 
+      'Content-Type': 'application/json',
+      'Content-Disposition': 'attachment; filename="pawguard-spec-report.json"'
+    });
+    res.end(JSON.stringify(report, null, 2));
     
   } else if (pathname === '/') {
     // Serve the dashboard HTML

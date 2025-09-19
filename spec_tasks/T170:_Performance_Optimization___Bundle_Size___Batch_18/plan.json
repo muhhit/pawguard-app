@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Optimize app bundle size and loading performance",
+  "agent": "optimus-claude",
+  "complexity": 3,
+  "unicornPotential": 3
+}

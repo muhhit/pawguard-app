@@ -1,8 +1,0 @@
-{
-  "provider": "anthropic",
-  "model": "claude-4-sonnet",
-  "description": "Set up comprehensive testing infrastructure with Jest and React Native Testing Library",
-  "agent": "optimus-claude",
-  "complexity": 3,
-  "unicornPotential": 2
-}

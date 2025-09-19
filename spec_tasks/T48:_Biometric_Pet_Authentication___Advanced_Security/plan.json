@@ -1,8 +1,0 @@
-{
-  "provider": "anthropic",
-  "model": "claude-4.1-opus",
-  "description": "Multi-modal biometric authentication system for pets",
-  "agent": "optimus-prime-opus",
-  "complexity": 4,
-  "unicornPotential": 4
-}

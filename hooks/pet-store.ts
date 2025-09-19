@@ -80,7 +80,7 @@ export const [PetProvider, usePets] = createContextHook(() => {
         if (!user) return [];
         
         // Try Supabase first
-        if ((supabase as any)?.from) {
+        if (supabase && (supabase as any)?.from) {
           const { data, error } = await supabase
             .from('pets')
             .select('*')

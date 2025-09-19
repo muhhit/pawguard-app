@@ -1,7 +1,7 @@
 {
   "provider": "anthropic",
   "model": "claude-4-sonnet",
-  "description": "Address Using GPT-4o instead of GPT-5-pro",
+  "description": "Address Using gpt-5-proo instead of GPT-5-pro",
   "agent": "optimus-claude",
   "complexity": 4,
   "unicornPotential": 3

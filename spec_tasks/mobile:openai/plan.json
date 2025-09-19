@@ -1,7 +1,7 @@
 {
   "id": "mobile:openai",
   "provider": "openai",
-  "model": "gpt-4o",
+  "model": "gpt-5-proo",
   "description": null,
   "difficulty": null,
   "priority": null,
