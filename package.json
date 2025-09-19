@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "PawGuard - AI-powered lost pet recovery platform",
   "main": "expo-router/entry",
+  "type": "module",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",

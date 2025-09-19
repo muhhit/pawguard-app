@@ -32,9 +32,14 @@ export interface Pet {
   name: string;
   type: string;
   breed: string | null;
-  age?: string;
+  age?: string | number;
   weight?: string;
   microchip_id?: string;
+  color?: string;
+  description?: string;
+  gender?: string;
+  size?: string;
+  special_needs?: string;
   last_location: {
     lat: number;
     lng: number;
@@ -44,6 +49,7 @@ export interface Pet {
   photos: string[];
   medical_records: MedicalRecord[];
   created_at: string;
+  ownership?: string;
 }
 
 export interface Sighting {
@@ -321,14 +327,11 @@ export const [PetProvider, usePets] = createContextHook(() => {
         console.log('🚨 New lost pet reported, triggering automation...');
         try {
           await AIServiceManager.triggerLostPetAutomation({
-            name: newPet.name,
-            type: newPet.type,
-            breed: newPet.breed,
-            location: newPet.last_location ? `${newPet.last_location.lat}, ${newPet.last_location.lng}` : 'Unknown location',
-            rewardAmount: newPet.reward_amount,
-            contact: user?.email || 'Owner',
-            lastSeen: 'Recently',
-            ownerName: user?.name || 'Pet Owner'
+            petId: newPet.id,
+            petName: newPet.name,
+            petType: newPet.type,
+            lastLocation: newPet.last_location || { lat: 0, lng: 0 },
+            description: `${newPet.breed || 'Unknown breed'} - Reward: ${newPet.reward_amount} TL`
           });
         } catch (error) {
           console.error('Automation failed:', error);
@@ -396,12 +399,10 @@ export const [PetProvider, usePets] = createContextHook(() => {
         console.log('🎉 Pet marked as found, triggering celebration automation...');
         try {
           await AIServiceManager.triggerFoundPetAutomation({
-            name: updatedPet.name,
-            type: updatedPet.type,
-            daysMissing: Math.floor((Date.now() - new Date(updatedPet.created_at).getTime()) / (1000 * 60 * 60 * 24)),
-            foundLocation: updatedPet.last_location ? `${updatedPet.last_location.lat}, ${updatedPet.last_location.lng}` : 'Safe location',
-            helperName: 'Community member',
-            ownerName: user?.name || 'Pet Owner'
+            petId: updatedPet.id,
+            petName: updatedPet.name,
+            foundLocation: updatedPet.last_location || { lat: 0, lng: 0 },
+            finderContact: user?.email || 'Community member'
           });
         } catch (error) {
           console.error('Found pet automation failed:', error);
