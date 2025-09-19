@@ -64,7 +64,7 @@ export const SimplifiedPetCard: React.FC<SimplifiedPetCardProps> = ({
             <OptimizedImage
               source={{ uri: pet.photos[0] }}
               style={styles.petImage}
-              placeholder="loading"
+              placeholder={true}
             />
             {pet.isVerified && (
               <View style={styles.verifiedBadge}>

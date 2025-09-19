@@ -13,6 +13,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useLocation } from '@/hooks/location-store';
 import { usePets, Pet } from '@/hooks/pet-store';
 import { useLanguage } from '@/hooks/language-store';
+import { normalizePet } from '@/utils/normalizePet';
 import MapView from './MapView';
 import GlassContainer from './GlassContainer';
 
@@ -101,7 +102,8 @@ export const InteractiveMapView: React.FC<InteractiveMapViewProps> = ({
     }
 
     // Add pet pins
-    allPets.forEach((pet) => {
+    allPets.forEach((rawPet) => {
+      const pet = normalizePet(rawPet);
       if (!pet.last_location) return;
 
       // Apply filters

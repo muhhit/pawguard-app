@@ -32,13 +32,17 @@ export interface Pet {
   name: string;
   type: string;
   breed: string | null;
-  age?: string;
+  age: string;
   weight?: string;
   microchip_id?: string;
   last_location: {
     lat: number;
     lng: number;
-  } | null;
+  };
+  found_location?: {
+    lat: number;
+    lng: number;
+  };
   reward_amount: number;
   is_found: boolean;
   photos: string[];

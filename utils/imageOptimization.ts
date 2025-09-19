@@ -200,7 +200,7 @@ export class ImageOptimizer {
     
     // For React Native, we can use Image.prefetch
     return Promise.all(
-      urls.map(url => RNImage.prefetch(this.optimize(url, options).uri))
+      urls.map(url => RNImage.prefetch(this.optimize(url, options).uri).then(() => {}))
     );
   }
 

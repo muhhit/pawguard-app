@@ -119,6 +119,40 @@ export class AIServiceManager {
   }
 
   /**
+   * Identify breed from a natural language description
+   */
+  public static async identifyBreed(description: string) {
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are a pet breed identification assistant. Answer in concise JSON where possible.'
+      },
+      {
+        role: 'user',
+        content: `Determine likely breed from this description. Return a short JSON with fields {"breed": string, "confidence": "high|medium|low", "alternativeBreeds"?: string[], "characteristics"?: string[]}. Description: ${description}`
+      }
+    ];
+    return this.getCompletion(messages);
+  }
+
+  /**
+   * Veterinary guidance for given symptoms
+   */
+  public static async getVeterinaryGuidance(symptoms: string) {
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are a veterinary AI assistant. Provide helpful, educational guidance. Always recommend consulting a veterinarian.'
+      },
+      {
+        role: 'user',
+        content: `Provide veterinary guidance for these symptoms: ${symptoms}. Include urgency keywords like EMERGENCY/URGENT/ROUTINE/INFORMATION in the text.`
+      }
+    ];
+    return this.getCompletion(messages);
+  }
+
+  /**
    * Generate pet health analysis from symptoms
    */
   public static async analyzePetHealth(
@@ -193,6 +227,32 @@ export class AIServiceManager {
 
     const result = await this.getCompletion(messages);
     return result.completion;
+  }
+
+  /**
+   * Automation stubs (no-op if backend not enabled)
+   */
+  public static async triggerLostPetAutomation(payload: {
+    name: string;
+    type: string;
+    location: string;
+    rewardAmount?: number;
+    contact?: string;
+    lastSeen?: string;
+    ownerName?: string;
+  }): Promise<void> {
+    console.log('🔔 triggerLostPetAutomation', payload);
+  }
+
+  public static async triggerFoundPetAutomation(payload: {
+    name: string;
+    type: string;
+    daysMissing?: number;
+    foundLocation: string | { lat: number; lng: number };
+    helperName?: string;
+    ownerName?: string;
+  }): Promise<void> {
+    console.log('🎉 triggerFoundPetAutomation', payload);
   }
 }
 

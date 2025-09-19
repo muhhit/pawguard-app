@@ -353,6 +353,18 @@ export const useAIPetRecognition = (options: UseAIPetRecognitionOptions = {}) =>
     setHealthAssessment(null);
   }, []);
 
+  // Clear only the last recognition result (keep batch/health)
+  const clearResult = useCallback(() => {
+    setState(prev => ({
+      ...prev,
+      result: null,
+      error: null,
+      confidence: 0,
+      processingTime: 0,
+      progress: 0,
+    }));
+  }, []);
+
   // Clear cache
   const clearCache = useCallback(() => {
     petVisionService.clearCache();
@@ -379,6 +391,7 @@ export const useAIPetRecognition = (options: UseAIPetRecognitionOptions = {}) =>
     assessHealth,
     cancelRecognition,
     reset,
+    clearResult,
     clearCache,
     getCacheStats,
     

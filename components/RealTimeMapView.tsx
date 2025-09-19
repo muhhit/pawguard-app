@@ -8,6 +8,8 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useLocation } from '../hooks/location-store';
+import { normalizePet } from '@/utils/normalizePet';
+import { Pet } from '@/hooks/pet-store';
 import MapView from './MapView';
 
 interface PetLocation {
@@ -56,23 +58,16 @@ export const RealTimeMapView: React.FC<RealTimeMapViewProps> = ({
           type: pet.type as 'dog' | 'cat',
           owner_id: '',
           breed: '',
-          age: 0,
-          weight: 0,
-          color: '',
-          description: '',
-          microchip_id: '',
-          is_lost: pet.status === 'lost',
-          is_found: pet.status === 'found',
+          // omit age/weight or provide as strings to satisfy Pet interface
           last_location: {
             lat: pet.latitude,
             lng: pet.longitude,
-            address: '',
-            timestamp: pet.timestamp
           },
           reward_amount: pet.reward || 0,
+          is_found: pet.status === 'found',
           photos: [],
-          created_at: '',
-          updated_at: ''
+          medical_records: [],
+          created_at: new Date(pet.timestamp).toISOString(),
         }))}
         enableClustering={clustered}
         enableHeatmap={showHeatmap}

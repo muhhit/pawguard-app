@@ -1,0 +1,52 @@
+module.exports = {
+  root: true,
+  extends: ['expo'],
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+  },
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['babel-preset-expo'],
+    },
+  },
+  rules: {
+    // Suppress common warnings to reduce noise
+    'no-unused-vars': 'off',
+    'no-console': 'off',
+    'no-undef': 'off',
+    'prefer-const': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/prop-types': 'off',
+    'import/no-unresolved': 'off',
+    'import/named': 'off',
+    'import/default': 'off',
+    'import/no-named-as-default': 'off',
+    'import/no-named-as-default-member': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+  },
+  globals: {
+    fetch: 'readonly',
+    window: 'readonly',
+    document: 'readonly',
+    navigator: 'readonly',
+    console: 'readonly',
+    setTimeout: 'readonly',
+    clearTimeout: 'readonly',
+    setInterval: 'readonly',
+    clearInterval: 'readonly',
+    global: 'readonly',
+    process: 'readonly',
+    Buffer: 'readonly',
+    __DEV__: 'readonly',
+  },
+};

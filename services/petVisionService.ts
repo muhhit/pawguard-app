@@ -50,6 +50,18 @@ export interface LostPetMatch {
   imageUrl: string;
 }
 
+// Compat exports for hooks
+export type PetRecognitionResult = PetAnalysisResult;
+export type MatchingPet = LostPetMatch;
+
+export interface BatchProcessingResult {
+  results: PetRecognitionResult[];
+  totalImages: number;
+  successCount: number;
+  errors: string[];
+  processingTime: number;
+}
+
 export interface VisionOptions {
   enableHealthAssessment?: boolean;
   enableBreedIdentification?: boolean;
@@ -131,6 +143,30 @@ class PetVisionService {
         processingTime: Date.now() - startTime,
       };
     }
+  }
+
+  /**
+   * Batch processing helper
+   */
+  async processBatch(imageUris: string[], options: VisionOptions = {}): Promise<BatchProcessingResult> {
+    const start = Date.now();
+    const results: PetRecognitionResult[] = [];
+    const errors: string[] = [];
+    for (const uri of imageUris) {
+      try {
+        const r = await this.recognizePet(uri, options);
+        results.push(r);
+      } catch (e: any) {
+        errors.push(e?.message || String(e));
+      }
+    }
+    return {
+      results,
+      totalImages: imageUris.length,
+      successCount: results.length,
+      errors,
+      processingTime: Date.now() - start,
+    };
   }
 
   /**
@@ -318,6 +354,13 @@ class PetVisionService {
     ];
 
     return mockMatches.filter(match => match.similarity > VISION_CONFIG.CONFIDENCE_THRESHOLD);
+  }
+
+  /**
+   * Public wrapper for lost pet matching used by hooks
+   */
+  async findMatchingLostPets(imageUri: string, _location?: { lat: number; lng: number }): Promise<LostPetMatch[]> {
+    return this.findLostPetMatches(imageUri);
   }
 
   // Helper methods
