@@ -4,15 +4,17 @@ AI-powered lost pet recovery platform connecting pet owners, community helpers, 
 
 ## Quick Start
 
-1) Setup environment:
+1) Install dependencies:
 ```bash
 npm install
-npm start
 ```
 
-2) Configure Supabase (PostGIS enabled with functions + indexes)
+2) Start the dashboard server (agents/guard):
+```bash
+node server/dashboard.cjs
+```
 
-3) Development:
+3) Optional: Start Expo dev server for the app:
 ```bash
 npx expo start
 ```
@@ -32,13 +34,19 @@ npx expo start
 - **Backend**: Node.js + Express + TypeScript
 - **AI**: OpenAI Vision API, multi-agent development
 
-## Project Status
+## Codespaces (Cline-ready)
 
-**Ready for 4-Agent Development Team:**
-- Spec Kit: Feature planning and architecture
-- Claude: Core implementation  
-- ChatGPT: Integrations and testing
-- Gemini: UI/UX and design
+- Open the repo in GitHub Codespaces. The devcontainer forwards port 5173 (Dashboard) and 19000 (Expo).
+- On start, the container installs deps and starts the dashboard in background.
+- If you’ve configured Codespaces secrets (OPENAI_API_KEY, ANTHROPIC_API_KEY, GITHUB_TOKEN, GOOGLE_API_KEY), run:
+  ```bash
+  bash scripts/codespaces-init.sh
+  ```
+  to generate a local `.env` (gitignored).
+- Cline Paste 3 script:
+  ```bash
+  bash scripts/cline-paste-3-simple.sh
+  ```
 
 ## Goals
 

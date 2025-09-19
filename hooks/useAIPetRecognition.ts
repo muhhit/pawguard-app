@@ -379,6 +379,7 @@ export const useAIPetRecognition = (options: UseAIPetRecognitionOptions = {}) =>
     assessHealth,
     cancelRecognition,
     reset,
+    clearResult: reset, // Alias for backwards compatibility
     clearCache,
     getCacheStats,
     

@@ -1,7 +1,7 @@
 {
-  "state": "prepared",
-  "startedAt": "2025-09-15T20:32:05.823Z",
-  "completedAt": "2025-09-15T20:32:08.939Z",
+  "state": "completed",
+  "startedAt": "2025-09-19T10:09:15.646Z",
+  "completedAt": "2025-09-19T10:09:18.107Z",
   "provider": "google",
   "model": "gemini-2.5-pro"
 }

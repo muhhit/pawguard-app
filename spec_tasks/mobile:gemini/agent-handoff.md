@@ -2,7 +2,7 @@ Task: mobile:gemini — SPEC task
 
 Context:
 - Provider: google
-- Model: gemini-1.5-pro
+- Model: gemini-2.5-pro
 - Priority: n/a
 - Difficulty: n/a
 - Dependencies: n/a

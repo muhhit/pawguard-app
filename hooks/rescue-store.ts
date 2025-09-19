@@ -21,21 +21,21 @@ export interface RescueTask {
 
 export const [RescueProvider, useRescue] = createContextHook(() => {
   const createChannel = useCallback(async (petId: string, ownerId: string) => {
-    if (!(supabase as any)?.from) return { id: 'mock', pet_id: petId, owner_id: ownerId, created_at: new Date().toISOString() } as RescueChannel;
+    if (!supabase) return { id: 'mock', pet_id: petId, owner_id: ownerId, created_at: new Date().toISOString() } as RescueChannel;
     const { data, error } = await supabase.from('rescue_channels').insert({ pet_id: petId, owner_id: ownerId }).select('*').single();
     if (error) throw error;
     return data as RescueChannel;
   }, []);
 
   const addTask = useCallback(async (channelId: string, title: string, notes?: string) => {
-    if (!(supabase as any)?.from) return { id: 'mock-task', channel_id: channelId, title, notes, status: 'open', created_at: new Date().toISOString() } as RescueTask;
+    if (!supabase) return { id: 'mock-task', channel_id: channelId, title, notes, status: 'open', created_at: new Date().toISOString() } as RescueTask;
     const { data, error } = await supabase.from('rescue_tasks').insert({ channel_id: channelId, title, notes }).select('*').single();
     if (error) throw error;
     return data as RescueTask;
   }, []);
 
   const listTasks = useCallback(async (channelId: string) => {
-    if (!(supabase as any)?.from) return [
+    if (!supabase) return [
       { id: 't1', channel_id: channelId, title: 'Afiş asma', status: 'open', created_at: new Date().toISOString() },
       { id: 't2', channel_id: channelId, title: 'Bölge taraması', status: 'doing', created_at: new Date().toISOString() }
     ] as RescueTask[];

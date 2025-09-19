@@ -55,6 +55,34 @@ export interface VisionOptions {
   enableBreedIdentification?: boolean;
   enableLostPetMatching?: boolean;
   priority?: 'speed' | 'accuracy';
+  useEdgeML?: boolean;
+}
+
+export interface PetRecognitionResult extends PetAnalysisResult {}
+
+export interface BatchProcessingResult {
+  results: PetRecognitionResult[];
+  totalProcessed: number;
+  failedImages: string[];
+  averageProcessingTime: number;
+  summary: {
+    speciesBreakdown: Record<string, number>;
+    breedBreakdown: Record<string, number>;
+    healthConcerns: number;
+  };
+}
+
+export interface MatchingPet {
+  id: string;
+  name: string;
+  similarity: number;
+  imageUrl: string;
+  location: string;
+  lastSeen: string;
+  contactInfo: string;
+  status: 'lost' | 'found';
+  breed?: string;
+  species?: string;
 }
 
 // Configuration
@@ -292,32 +320,129 @@ class PetVisionService {
   }
 
   /**
-   * Find matching lost pets (mock implementation)
+   * Process multiple images in batch
+   */
+  async processBatch(imageUris: string[], options: VisionOptions = {}): Promise<BatchProcessingResult> {
+    console.log(`🔄 Processing batch of ${imageUris.length} images`);
+    const startTime = Date.now();
+    
+    const results: PetRecognitionResult[] = [];
+    const failedImages: string[] = [];
+    
+    for (const imageUri of imageUris) {
+      try {
+        const result = await this.recognizePet(imageUri, options);
+        results.push(result);
+      } catch (error) {
+        console.warn(`Failed to process image: ${imageUri}`, error);
+        failedImages.push(imageUri);
+      }
+    }
+    
+    const totalProcessingTime = Date.now() - startTime;
+    const averageProcessingTime = results.length > 0 ? totalProcessingTime / results.length : 0;
+    
+    // Generate summary statistics
+    const speciesBreakdown: Record<string, number> = {};
+    const breedBreakdown: Record<string, number> = {};
+    let healthConcerns = 0;
+    
+    results.forEach(result => {
+      // Count species
+      speciesBreakdown[result.species] = (speciesBreakdown[result.species] || 0) + 1;
+      
+      // Count breeds
+      breedBreakdown[result.breed] = (breedBreakdown[result.breed] || 0) + 1;
+      
+      // Count health concerns
+      if (result.healthAssessment && ['fair', 'poor', 'concerning'].includes(result.healthAssessment.overallHealth)) {
+        healthConcerns++;
+      }
+    });
+    
+    return {
+      results,
+      totalProcessed: results.length,
+      failedImages,
+      averageProcessingTime,
+      summary: {
+        speciesBreakdown,
+        breedBreakdown,
+        healthConcerns
+      }
+    };
+  }
+
+  /**
+   * Find matching lost pets in database
+   */
+  async findMatchingLostPets(imageUri: string, location?: { lat: number; lng: number }): Promise<MatchingPet[]> {
+    try {
+      console.log('🔍 Searching for matching lost pets...');
+      
+      // For now, return mock data - in real implementation this would:
+      // 1. Extract facial features from the image
+      // 2. Query the lost pets database
+      // 3. Compare features using facial recognition
+      // 4. Return matches above similarity threshold
+      
+      const mockMatches: MatchingPet[] = [
+        {
+          id: '1',
+          name: 'Max',
+          similarity: 0.92,
+          imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=300',
+          location: 'Kadıköy, Istanbul',
+          lastSeen: '3 hours ago',
+          contactInfo: '+90 555 123 4567',
+          status: 'lost',
+          breed: 'Golden Retriever',
+          species: 'dog'
+        },
+        {
+          id: '2', 
+          name: 'Luna',
+          similarity: 0.88,
+          imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300',
+          location: 'Beşiktaş, Istanbul',
+          lastSeen: '1 day ago',
+          contactInfo: '+90 555 987 6543',
+          status: 'lost',
+          breed: 'Husky Mix',
+          species: 'dog'
+        }
+      ];
+      
+      // Filter by location proximity if provided
+      if (location) {
+        // In real implementation, filter by geographic distance
+        console.log(`Filtering results near ${location.lat}, ${location.lng}`);
+      }
+      
+      // Return matches above confidence threshold
+      return mockMatches.filter(match => match.similarity > 0.85);
+      
+    } catch (error) {
+      console.error('❌ Failed to find matching lost pets:', error);
+      return [];
+    }
+  }
+
+  /**
+   * Find matching lost pets (legacy implementation for backwards compatibility)
    */
   private async findLostPetMatches(imageUri: string): Promise<LostPetMatch[]> {
-    // Mock implementation - in real app, this would use facial recognition
-    const mockMatches: LostPetMatch[] = [
-      {
-        id: '1',
-        similarity: 0.94,
-        petName: 'Max',
-        lastSeen: '2 hours ago',
-        location: 'Kadıköy, Istanbul',
-        contactInfo: '+90 555 123 4567',
-        imageUrl: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=300'
-      },
-      {
-        id: '2',
-        similarity: 0.87,
-        petName: 'Luna',
-        lastSeen: '1 day ago',
-        location: 'Beşiktaş, Istanbul',
-        contactInfo: '+90 555 987 6543',
-        imageUrl: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300'
-      }
-    ];
-
-    return mockMatches.filter(match => match.similarity > VISION_CONFIG.CONFIDENCE_THRESHOLD);
+    // Use the new implementation and convert to old format
+    const matches = await this.findMatchingLostPets(imageUri);
+    return matches.map(match => ({
+      id: match.id,
+      similarity: match.similarity,
+      petName: match.name,
+      lastSeen: match.lastSeen,
+      location: match.location,
+      contactInfo: match.contactInfo,
+      imageUrl: match.imageUrl
+    }));
   }
 
   // Helper methods

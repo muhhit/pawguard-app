@@ -8,21 +8,23 @@ export interface CirclePost { id: string; circle_id: string; author_id: string; 
 
 export const [CirclesProvider, useCircles] = createContextHook(() => {
   const listCircles = useCallback(async (): Promise<Circle[]> => {
-    if (!(supabase as any)?.from) return [];
+    if (!supabase) return [];
     const { data, error } = await supabase.from('circles').select('*').order('created_at', { ascending: false });
     if (error) throw error; return (data || []) as Circle[];
   }, []);
 
   const createCircle = useCallback(async (name: string, description?: string) => {
+    if (!supabase) return null;
     const user = (await supabase.auth.getUser()).data.user?.id;
-    if (!(supabase as any)?.from || !user) return null;
+    if (!user) return null;
     const { data, error } = await supabase.from('circles').insert({ name, description, created_by: user }).select('*').single();
     if (error) throw error; return data as Circle;
   }, []);
 
   const joinCircle = useCallback(async (circleId: string) => {
+    if (!supabase) return null;
     const user = (await supabase.auth.getUser()).data.user?.id;
-    if (!(supabase as any)?.from || !user) return null;
+    if (!user) return null;
     const { data, error } = await supabase.from('circle_members').insert({ circle_id: circleId, user_id: user }).select('*').single();
     if (error) throw error; return data as CircleMember;
   }, []);

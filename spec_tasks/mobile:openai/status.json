@@ -1,7 +1,7 @@
 {
-  "state": "prepared",
-  "startedAt": "2025-09-15T20:32:05.861Z",
-  "completedAt": "2025-09-15T20:32:08.348Z",
+  "state": "completed",
+  "startedAt": "2025-09-19T10:09:15.577Z",
+  "completedAt": "2025-09-19T10:09:17.763Z",
   "provider": "openai",
-  "model": "gpt-5-proo"
+  "model": "gpt-5-pro"
 }

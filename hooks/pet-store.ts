@@ -76,7 +76,7 @@ export const [PetProvider, usePets] = createContextHook(() => {
         if (!user) return [];
         
         // Try Supabase first
-        if (supabase && (supabase as any)?.from) {
+        if (supabase) {
           const { data, error } = await supabase
             .from('pets')
             .select('*')
@@ -196,7 +196,7 @@ export const [PetProvider, usePets] = createContextHook(() => {
     queryFn: async () => {
       try {
         // Supabase + gizlilik: get_pets_with_privacy üzerinden çek, mesafeyi istemcide uygula
-        if ((supabase as any)?.rpc) {
+        if (supabase) {
           const requester = user?.id || null;
           // Try v2 first (city-aware); fallback to v1
           let data: any = null; let error: any = null;
@@ -270,54 +270,47 @@ export const [PetProvider, usePets] = createContextHook(() => {
   const addPetMutation = useMutation({
     mutationFn: async (petData: Omit<Pet, 'id' | 'owner_id' | 'created_at'>) => {
       if (!user) throw new Error('User not authenticated');
-      if ((supabase as any)?.from) {
-          const payload: any = {
-            owner_id: user.id,
-            name: petData.name,
-            type: petData.type,
-            breed: petData.breed,
-            ownership: (petData as any).ownership || 'owned',
-            last_location: petData.last_location
-              ? `POINT(${petData.last_location.lng} ${petData.last_location.lat})`
-              : null,
-            reward_amount: petData.reward_amount,
-            is_found: petData.is_found,
-            photos: petData.photos,
-          };
-        const { data, error } = await supabase.from('pets').insert(payload).select('*').single();
-        if (error) throw error;
-        const created: Pet = {
-          id: data.id,
-          owner_id: data.owner_id,
-          name: data.name,
-          type: data.type,
-          breed: data.breed,
-          last_location: data.last_location ? {
-            lat: data.last_location?.y ?? data.last_location?.coordinates?.[1],
-            lng: data.last_location?.x ?? data.last_location?.coordinates?.[0],
-          } : null,
-          reward_amount: data.reward_amount ?? 0,
-          is_found: !!data.is_found,
-          photos: data.photos || [],
-          medical_records: [],
-          created_at: data.created_at,
-        };
-        return created;
-      }
-      // Fallback mock
-      return {
-        id: 'mock-pet-' + Date.now(),
+      if (!supabase) return null;
+      
+      const payload: any = {
         owner_id: user.id,
-        ...petData,
-        medical_records: petData.medical_records || [],
-        created_at: new Date().toISOString(),
-      } as Pet;
+        name: petData.name,
+        type: petData.type,
+        breed: petData.breed,
+        ownership: (petData as any).ownership || 'owned',
+        last_location: petData.last_location
+          ? `POINT(${petData.last_location.lng} ${petData.last_location.lat})`
+          : null,
+        reward_amount: petData.reward_amount,
+        is_found: petData.is_found,
+        photos: petData.photos,
+      };
+      const { data, error } = await supabase.from('pets').insert(payload).select('*').single();
+      if (error) throw error;
+      
+      const created: Pet = {
+        id: data.id,
+        owner_id: data.owner_id,
+        name: data.name,
+        type: data.type,
+        breed: data.breed,
+        last_location: data.last_location ? {
+          lat: data.last_location?.y ?? data.last_location?.coordinates?.[1],
+          lng: data.last_location?.x ?? data.last_location?.coordinates?.[0],
+        } : null,
+        reward_amount: data.reward_amount ?? 0,
+        is_found: !!data.is_found,
+        photos: data.photos || [],
+        medical_records: [],
+        created_at: data.created_at,
+      };
+      return created;
     },
     onSuccess: async (newPet) => {
       queryClient.invalidateQueries({ queryKey: ['pets', user?.id] });
       
       // Trigger automation for lost pet
-      if (!newPet.is_found) {
+      if (newPet && !newPet.is_found) {
         console.log('🚨 New lost pet reported, triggering automation...');
         try {
           await AIServiceManager.triggerLostPetAutomation({
@@ -340,52 +333,39 @@ export const [PetProvider, usePets] = createContextHook(() => {
   // Update pet mutation
   const updatePetMutation = useMutation({
     mutationFn: async ({ petId, updates }: { petId: string; updates: Partial<Pet> }) => {
-      if ((supabase as any)?.from) {
-        const payload: any = { ...updates };
-        if (updates.last_location) {
-          payload.last_location = `POINT(${updates.last_location.lng} ${updates.last_location.lat})`;
-        }
-        const { data, error } = await supabase
-          .from('pets')
-          .update(payload)
-          .eq('id', petId)
-          .select('*')
-          .single();
-        if (error) throw error;
-        const updated: Pet = {
-          id: data.id,
-          owner_id: data.owner_id,
-          name: data.name,
-          type: data.type,
-          breed: data.breed,
-          ownership: data.ownership || 'owned',
-          last_location: data.last_location ? {
-            lat: data.last_location?.y ?? data.last_location?.coordinates?.[1],
-            lng: data.last_location?.x ?? data.last_location?.coordinates?.[0],
-          } : null,
-          reward_amount: data.reward_amount ?? 0,
-          is_found: !!data.is_found,
-          photos: data.photos || [],
-          medical_records: [],
-          created_at: data.created_at,
-        };
-        return updated;
+      if (!supabase) return null;
+      
+      const payload: any = { ...updates };
+      if (updates.last_location) {
+        payload.last_location = `POINT(${updates.last_location.lng} ${updates.last_location.lat})`;
       }
-      // Fallback mock
-      return {
-        id: petId,
-        owner_id: user?.id || 'mock-owner',
-        name: 'Updated Pet',
-        type: 'dog',
-        breed: null,
-        last_location: null,
-        reward_amount: 100,
-        is_found: false,
-        photos: [],
+      
+      const { data, error } = await supabase
+        .from('pets')
+        .update(payload)
+        .eq('id', petId)
+        .select('*')
+        .single();
+      
+      if (error) throw error;
+      
+      const updated: Pet = {
+        id: data.id,
+        owner_id: data.owner_id,
+        name: data.name,
+        type: data.type,
+        breed: data.breed,
+        last_location: data.last_location ? {
+          lat: data.last_location?.y ?? data.last_location?.coordinates?.[1],
+          lng: data.last_location?.x ?? data.last_location?.coordinates?.[0],
+        } : null,
+        reward_amount: data.reward_amount ?? 0,
+        is_found: !!data.is_found,
+        photos: data.photos || [],
         medical_records: [],
-        created_at: new Date().toISOString(),
-        ...updates,
-      } as Pet;
+        created_at: data.created_at,
+      };
+      return updated;
     },
     onSuccess: async (updatedPet, variables) => {
       queryClient.invalidateQueries({ queryKey: ['pets', user?.id] });

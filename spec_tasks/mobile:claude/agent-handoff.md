@@ -2,7 +2,7 @@ Task: mobile:claude — SPEC task
 
 Context:
 - Provider: anthropic
-- Model: claude-3-5-sonnet
+- Model: claude-4-sonnet
 - Priority: n/a
 - Difficulty: n/a
 - Dependencies: n/a
@@ -20,3 +20,4 @@ Rules:
 - Do not commit secrets.
 - Small, verifiable commits.
 - When this task is completed, update status.json to {"state": "completed"} to allow the orchestrator to proceed.
+model: claude-4-opus

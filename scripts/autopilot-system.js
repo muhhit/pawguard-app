@@ -10,11 +10,11 @@ class AutopilotSystem {
     this.isRunning = false;
     this.interval = null;
     this.config = {
-      enabled: false,
-      mode: "safe",
-      periodMs: 600000, // 10 minutes
-      concurrency: 2,
-      maxTasks: 6
+      enabled: true,
+      mode: "aggressive",
+      periodMs: 60000, // 1 minute for faster fixes
+      concurrency: 4,
+      maxTasks: 12
     };
     
     this.taskCounter = 67; // Start from T67

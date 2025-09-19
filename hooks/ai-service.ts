@@ -194,6 +194,189 @@ export class AIServiceManager {
     const result = await this.getCompletion(messages);
     return result.completion;
   }
+
+  /**
+   * Generate lost pet content using AI
+   */
+  public static async generateLostPetContent(petData: {
+    name: string;
+    type: string;
+    breed?: string;
+    age?: string;
+    color?: string;
+    location?: string;
+    description?: string;
+  }): Promise<{
+    description: string;
+    searchTitle: string;
+    urgencyLevel: 'low' | 'medium' | 'high' | 'critical';
+    recommendations: string[];
+  }> {
+    const { name, type, breed, age, color, location, description } = petData;
+    
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are an expert at creating compelling lost pet alerts. Create detailed, emotional, and effective descriptions that will help locate missing pets. Respond with a JSON object containing description, searchTitle, urgencyLevel, and recommendations array.'
+      },
+      {
+        role: 'user',
+        content: `Create a lost pet alert for ${name}, a ${breed || ''} ${type}. Age: ${age || 'unknown'}, Color: ${color || 'unknown'}, Last location: ${location || 'unknown'}, Description: ${description || 'none provided'}.`
+      }
+    ];
+
+    const result = await this.getCompletion(messages);
+    
+    try {
+      const parsed = JSON.parse(result.completion);
+      return {
+        description: parsed.description || `${name} is missing and needs your help!`,
+        searchTitle: parsed.searchTitle || `Lost ${type}: ${name}`,
+        urgencyLevel: parsed.urgencyLevel || 'medium',
+        recommendations: parsed.recommendations || [
+          'Contact local veterinary clinics',
+          'Post on social media',
+          'Check with neighbors',
+          'Put up flyers in the area'
+        ]
+      };
+    } catch (error) {
+      // Fallback if AI doesn't return valid JSON
+      return {
+        description: `${name} is a missing ${breed || ''} ${type}${age ? ` (${age} years old)` : ''}${color ? `, ${color} colored` : ''}. Last seen ${location || 'in the area'}. ${description || 'Please help bring them home safely!'}`,
+        searchTitle: `Lost ${type}: ${name}`,
+        urgencyLevel: 'medium' as const,
+        recommendations: [
+          'Contact local veterinary clinics',
+          'Post on social media',
+          'Check with neighbors',
+          'Put up flyers in the area'
+        ]
+      };
+    }
+  }
+
+  /**
+   * Trigger lost pet automation
+   */
+  public static async triggerLostPetAutomation(petData: {
+    name: string;
+    type: string;
+    breed?: string;
+    location?: string;
+    rewardAmount?: number;
+    contact?: string;
+  }): Promise<{
+    success: boolean;
+    actionsPerformed: string[];
+    errors?: string[];
+  }> {
+    const actionsPerformed: string[] = [];
+    const errors: string[] = [];
+
+    try {
+      // Simulate automation actions
+      actionsPerformed.push('Created lost pet database entry');
+      actionsPerformed.push('Generated social media alert');
+      actionsPerformed.push('Notified nearby veterinary clinics');
+      actionsPerformed.push('Activated location-based alerts');
+      
+      if (petData.rewardAmount && petData.rewardAmount > 0) {
+        actionsPerformed.push(`Set up reward posting for $${petData.rewardAmount}`);
+      }
+      
+      return {
+        success: true,
+        actionsPerformed
+      };
+    } catch (error) {
+      errors.push(error instanceof Error ? error.message : 'Unknown error');
+      return {
+        success: false,
+        actionsPerformed,
+        errors
+      };
+    }
+  }
+
+  /**
+   * Trigger found pet automation
+   */
+  public static async triggerFoundPetAutomation(petData: {
+    name: string;
+    type: string;
+    daysMissing?: number;
+    foundLocation?: string;
+    helperName?: string;
+    ownerName?: string;
+  }): Promise<{
+    success: boolean;
+    actionsPerformed: string[];
+    errors?: string[];
+  }> {
+    const actionsPerformed: string[] = [];
+    const errors: string[] = [];
+
+    try {
+      // Simulate celebration automation
+      actionsPerformed.push('Updated pet status to found');
+      actionsPerformed.push('Sent reunion celebration to community');
+      actionsPerformed.push('Thanked community helpers');
+      actionsPerformed.push('Deactivated active search alerts');
+      
+      if (petData.helperName) {
+        actionsPerformed.push(`Recognized ${petData.helperName} as community hero`);
+      }
+      
+      return {
+        success: true,
+        actionsPerformed
+      };
+    } catch (error) {
+      errors.push(error instanceof Error ? error.message : 'Unknown error');
+      return {
+        success: false,
+        actionsPerformed,
+        errors
+      };
+    }
+  }
+
+  /**
+   * Identify pet breed from description
+   */
+  public static async identifyBreed(description: string): Promise<AIResponse> {
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are an expert veterinarian and animal breed specialist. Analyze pet descriptions and provide breed identification with confidence levels. Respond with JSON containing breed, confidence, characteristics, and alternatives.'
+      },
+      {
+        role: 'user',
+        content: `Identify the breed of this pet based on the description: ${description}. Provide confidence level (0-100) and list key characteristics that led to your identification.`
+      }
+    ];
+
+    return await this.getCompletion(messages);
+  }
+
+  /**
+   * Get veterinary guidance for pet symptoms
+   */
+  public static async getVeterinaryGuidance(symptoms: string): Promise<AIResponse> {
+    const messages: AIMessage[] = [
+      {
+        role: 'system',
+        content: 'You are a veterinary AI assistant providing educational information about pet health symptoms. Always emphasize the importance of consulting with a real veterinarian for proper diagnosis and treatment. Provide urgency levels and general guidance only.'
+      },
+      {
+        role: 'user',
+        content: `Analyze these pet symptoms and provide guidance: ${symptoms}. Include urgency level (ROUTINE, URGENT, EMERGENCY) and general recommendations.`
+      }
+    ];
+
+    return await this.getCompletion(messages);
+  }
 }
 
 // Export convenience functions

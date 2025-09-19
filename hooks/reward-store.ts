@@ -30,6 +30,10 @@ export interface RewardClaimWithPet extends RewardClaim {
     name: string | null;
     email: string;
   };
+  owner: {
+    name: string | null;
+    email: string;
+  };
 }
 
 export const [RewardProvider, useRewards] = createContextHook(() => {
@@ -41,7 +45,7 @@ export const [RewardProvider, useRewards] = createContextHook(() => {
     queryKey: ['reward-claims', 'owner', user?.id, user],
     queryFn: async () => {
       if (!user) return [];
-      if ((supabase as any)?.from) {
+      if (supabase) {
         const { data, error } = await supabase
           .from('reward_claims')
           .select('*')
@@ -60,7 +64,7 @@ export const [RewardProvider, useRewards] = createContextHook(() => {
     queryKey: ['reward-claims', 'claimer', user?.id, user],
     queryFn: async () => {
       if (!user) return [];
-      if ((supabase as any)?.from) {
+      if (supabase) {
         const { data, error } = await supabase
           .from('reward_claims')
           .select('*')
@@ -142,7 +146,7 @@ export const [RewardProvider, useRewards] = createContextHook(() => {
       claimId: string;
       status: 'approved' | 'rejected' | 'paid';
     }) => {
-      if ((supabase as any)?.from) {
+      if (supabase) {
         const { data, error } = await supabase
           .from('reward_claims')
           .update({ status, updated_at: new Date().toISOString() })
@@ -196,7 +200,7 @@ export const [RewardProvider, useRewards] = createContextHook(() => {
       paymentMethod: 'iyzico' | 'manual';
       amount: number;
     }) => {
-      if ((supabase as any)?.from) {
+      if (supabase) {
         const { data, error } = await supabase
           .from('reward_claims')
           .update({ status: 'paid', payment_id: paymentId, payment_method: paymentMethod, updated_at: new Date().toISOString() })
@@ -240,7 +244,7 @@ export const [RewardProvider, useRewards] = createContextHook(() => {
       evidencePhoto,
       evidenceNotes,
     }: { claimId: string; evidencePhoto?: string | null; evidenceNotes?: string | null }) => {
-      if ((supabase as any)?.from) {
+      if (supabase) {
         const { data, error } = await supabase
           .from('reward_claims')
           .update({ evidence_photo: evidencePhoto ?? null, evidence_notes: evidenceNotes ?? null, updated_at: new Date().toISOString() })

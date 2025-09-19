@@ -2,7 +2,7 @@ Task: mobile:openai — SPEC task
 
 Context:
 - Provider: openai
-- Model: gpt-4o
+- Model: gpt-5-pro
 - Priority: n/a
 - Difficulty: n/a
 - Dependencies: n/a

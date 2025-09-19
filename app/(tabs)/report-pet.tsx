@@ -262,10 +262,9 @@ export default function ReportPetScreen() {
         age: form.age,
         color: form.color,
         location: form.lastSeenLocation,
-        urgency: form.urgency,
-        photos: form.photos
+        description: form.description
       });
-      const description = response.completion;
+      const description = response.description;
 
       setForm(prev => ({
         ...prev,
@@ -960,7 +959,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.3)',
-    backdropFilter: 'blur(10px)',
   },
   textArea: {
     height: 100,

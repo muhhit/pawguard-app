@@ -1,0 +1,29 @@
+{
+  "name": "PawGuard Codespaces",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.11" }
+  },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Continue.continue",
+        "clinedev.cline",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "containerEnv": {
+    "NODE_ENV": "development"
+  },
+  "forwardPorts": [5173, 19000],
+  "portsAttributes": {
+    "5173": { "label": "Optimus Dashboard" },
+    "19000": { "label": "Expo Dev" }
+  },
+  "postStartCommand": "bash -lc 'if [ -f .env ]; then source scripts/codespaces-init.sh || true; fi; nohup node server/dashboard.cjs >/workspaces/pawguard-dashboard.log 2>&1 &'"
+}
+

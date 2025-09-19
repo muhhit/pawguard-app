@@ -1,7 +1,7 @@
 import { supabase } from '@/lib/supabase';
 
 export async function uploadEvidenceImage(localUri: string, claimId: string): Promise<string> {
-  if (!(supabase as any)?.storage) throw new Error('Storage not configured');
+  if (!supabase) throw new Error('Storage not configured');
   const res = await fetch(localUri);
   const blob = await res.blob();
   const filePath = `evidence/${claimId}-${Date.now()}.jpg`;

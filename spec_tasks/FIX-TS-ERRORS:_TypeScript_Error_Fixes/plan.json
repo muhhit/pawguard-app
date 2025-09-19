@@ -1,0 +1,10 @@
+{
+  "provider": "anthropic",
+  "model": "claude-opus-4.1",
+  "description": "Fix all TypeScript compilation errors to enable clean builds",
+  "agent": "optimus-claude",
+  "complexity": 5,
+  "unicornPotential": 4,
+  "priority": "critical",
+  "mode": "aggressive"
+}

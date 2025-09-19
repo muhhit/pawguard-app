@@ -679,7 +679,6 @@ const styles = StyleSheet.create({
   },
   webGlass: {
     backgroundColor: 'rgba(255,255,255,0.15)',
-    backdropFilter: 'blur(40px)',
   },
   glassContent: {
     padding: 20,
@@ -746,7 +745,6 @@ const styles = StyleSheet.create({
   },
   webNavBar: {
     backgroundColor: 'rgba(255,255,255,0.9)',
-    backdropFilter: 'blur(40px)',
   },
   navContent: {
     flexDirection: 'row',
@@ -787,7 +785,6 @@ const styles = StyleSheet.create({
   },
   webBottomSheet: {
     backgroundColor: 'rgba(255,255,255,0.95)',
-    backdropFilter: 'blur(40px)',
   },
   sheetHandle: {
     width: 40,

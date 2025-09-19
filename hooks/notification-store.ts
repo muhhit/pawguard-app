@@ -242,7 +242,7 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
       }
 
       // Save Expo push token if granted
-      if (granted && (supabase as any)?.from) {
+      if (granted && supabase) {
         const token = (await Notifications.getExpoPushTokenAsync()).data;
         try {
           await supabase.from('user_push_tokens').insert({
@@ -385,6 +385,7 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
       }
 
       // Get push tokens for all users
+      if (!supabase) return;
       const { data: pushTokens, error } = await supabase
         .from('user_push_tokens')
         .select('push_token')
@@ -444,6 +445,7 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
       setError(null);
 
       // Get pet details
+      if (!supabase) return;
       const { data: pet, error: petError } = await supabase
         .from('pets')
         .select('*')
@@ -456,6 +458,7 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
 
       // Get all users within 15km radius for emergency broadcasts
       const radiusKm = 15;
+      if (!supabase) return;
       const { data: nearbyUsers, error: usersError } = await supabase.rpc('users_within_radius', {
         center_lat: location.lat,
         center_lng: location.lng,
@@ -465,6 +468,7 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
       if (usersError) {
         console.error('Error fetching nearby users:', usersError.message || usersError);
         // Fallback: get all users (for testing)
+        if (supabase) {
         const { data: allUsers } = await supabase
           .from('users')
           .select('id')
@@ -487,12 +491,15 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
           });
 
           // Track analytics
+          if (supabase) {
           await supabase.from('emergency_broadcasts').insert({
             pet_id: petId,
             location: `POINT(${location.lng} ${location.lat})`,
             recipients_count: userIds.length,
             broadcast_type: 'emergency'
           });
+          }
+        }
 
           return {
             recipientCount: userIds.length,
@@ -528,6 +535,7 @@ export const [NotificationProvider, useNotifications] = createContextHook((): No
       });
 
       // Log the broadcast for analytics
+      if (!supabase) return;
       await supabase.from('emergency_broadcasts').insert({
         pet_id: petId,
         location: `POINT(${location.lng} ${location.lat})`,
