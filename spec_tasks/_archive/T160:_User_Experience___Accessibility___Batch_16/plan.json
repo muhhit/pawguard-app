@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Improve accessibility features and WCAG compliance",
+  "agent": "optimus-claude",
+  "complexity": 3,
+  "unicornPotential": 2
+}

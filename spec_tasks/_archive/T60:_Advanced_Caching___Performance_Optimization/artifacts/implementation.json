@@ -1,0 +1,24 @@
+{
+  "taskId": "T60:_Advanced_Caching___Performance_Optimization",
+  "agent": "optimus-claude",
+  "model": "claude-4-sonnet",
+  "role": "Leader & Security Architect",
+  "expertise": [
+    "security",
+    "backend",
+    "infrastructure",
+    "database",
+    "api"
+  ],
+  "unicornPotential": 5,
+  "complexity": 5,
+  "implementedAt": "2025-09-16T20:06:34.216Z",
+  "files": [
+    "index.ts",
+    "service.ts",
+    "types.ts",
+    "utils.ts",
+    "unit.test.ts",
+    "integration.test.ts"
+  ]
+}

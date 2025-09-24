@@ -1,0 +1,24 @@
+{
+  "taskId": "T1:_Payments___Iyzico_Integration__Backend___App_",
+  "agent": "optimus-claude",
+  "model": "claude-4-sonnet",
+  "role": "Leader & Security Architect",
+  "expertise": [
+    "security",
+    "backend",
+    "infrastructure",
+    "database",
+    "api"
+  ],
+  "unicornPotential": 3,
+  "complexity": 4,
+  "implementedAt": "2025-09-16T12:49:32.566Z",
+  "files": [
+    "index.ts",
+    "service.ts",
+    "types.ts",
+    "utils.ts",
+    "unit.test.ts",
+    "integration.test.ts"
+  ]
+}

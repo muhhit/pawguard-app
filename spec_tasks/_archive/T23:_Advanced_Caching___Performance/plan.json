@@ -1,0 +1,10 @@
+{
+  "id": "T23: Advanced Caching & Performance",
+  "provider": "google",
+  "model": "gemini-2.5-pro",
+  "description": null,
+  "difficulty": null,
+  "priority": null,
+  "dependencies": [],
+  "createdAt": "2025-09-15T20:16:30.615Z"
+}

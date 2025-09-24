@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Implement comprehensive automated testing suite with coverage reporting",
+  "agent": "optimus-claude",
+  "complexity": 3,
+  "unicornPotential": 2
+}

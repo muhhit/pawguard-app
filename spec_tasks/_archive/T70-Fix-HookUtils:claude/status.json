@@ -1,0 +1,8 @@
+{
+  "state": "pending",
+  "priority": "high",
+  "created": "2025-09-19T16:16:30.000Z",
+  "category": "typescript-fix",
+  "target_files": ["hooks/**/*.ts", "utils/**/*.ts"],
+  "description": "Fix remaining hook and util TypeScript errors"
+}

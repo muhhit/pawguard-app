@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Decentralized pet identity system using blockchain technology",
+  "agent": "optimus-claude",
+  "complexity": 4,
+  "unicornPotential": 4
+}

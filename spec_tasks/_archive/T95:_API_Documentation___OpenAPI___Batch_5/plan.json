@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4-sonnet",
+  "description": "Create comprehensive API documentation with OpenAPI/Swagger",
+  "agent": "optimus-claude",
+  "complexity": 2,
+  "unicornPotential": 1
+}

@@ -1,0 +1,8 @@
+{
+  "provider": "anthropic",
+  "model": "claude-4.1-opus",
+  "description": "AI-coordinated autonomous drone fleet for pet rescue operations",
+  "agent": "optimus-prime-opus",
+  "complexity": 5,
+  "unicornPotential": 5
+}
